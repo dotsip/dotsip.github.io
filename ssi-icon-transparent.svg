@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Wing 1: Solar Flare & 24K Sunburst Gold -->
+    <linearGradient id="trans-solar-wing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff176" />
+      <stop offset="35%" stop-color="#ff8400" />
+      <stop offset="75%" stop-color="#e63900" />
+      <stop offset="100%" stop-color="#801500" />
+    </linearGradient>
+
+    <!-- Wing 2: Cosmic Ultraviolet & Deep Space Violet -->
+    <linearGradient id="trans-violet-wing" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f000ff" />
+      <stop offset="45%" stop-color="#7c00ff" />
+      <stop offset="85%" stop-color="#3b00c4" />
+      <stop offset="100%" stop-color="#18006b" />
+    </linearGradient>
+
+    <!-- Deep 3D Drop Shadow -->
+    <filter id="trans-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <!-- PURE EMBLEM (TRANSPARENT BACKGROUND, CENTERED 300, 300) -->
+  <g transform="translate(300, 300) scale(1.18) rotate(-22)" filter="url(#trans-shadow)">
+    <!-- Outer Precision Ring -->
+    <circle cx="0" cy="0" r="148" fill="none" stroke="#7c00ff" stroke-width="2" opacity="0.4" />
+    <circle cx="0" cy="0" r="145" fill="none" stroke="#ff8400" stroke-width="1" opacity="0.3" />
+
+    <!-- 1. Upper Wing: Solar Flare -->
+    <path d="M 0 -144 
+             A 144 144 0 0 1 126 70 
+             C 92 40, 50 16, 0 16 
+             C -38 16, -68 -15, -68 -55 
+             C -68 -105, -35 -144, 0 -144 Z" 
+          fill="url(#trans-solar-wing)" />
+
+    <!-- 2. Lower Wing: Cosmic Violet -->
+    <path d="M 0 144 
+             A 144 144 0 0 1 -126 -70 
+             C -92 -40, -50 -16, 0 -16 
+             C 38 -16, 68 15, 68 55 
+             C 68 105, 35 144, 0 144 Z" 
+          fill="url(#trans-violet-wing)" />
+  </g>
+</svg>
