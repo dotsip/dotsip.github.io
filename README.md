@@ -255,3 +255,17 @@ Pasar adalah majikan Anda                                                 Pasar 
 | ![deprecated](https://img.shields.io/badge/9-ffa07a) | ![deprecated](https://img.shields.io/badge/$2,560-3422E2)    | ![deprecated](https://img.shields.io/badge/$2,560-8A2BE2)   | ![deprecated](https://img.shields.io/badge/$5,120-2be23e)     | ![deprecated](https://img.shields.io/badge/September_2024-2be23e) | ![deprecated](https://img.shields.io/badge/Tunggu-8A2BE2) |
 | ![deprecated](https://img.shields.io/badge/8-ffa07a) | ![deprecated](https://img.shields.io/badge/$1,280-3422E2)    | ![deprecated](https://img.shields.io/badge/$1,280-8A2BE2)   | ![deprecated](https://img.shields.io/badge/$2,560-2be23e)     | ![deprecated](https://img.shields.io/badge/Agustus_2024-2be23e)   | ![deprecated](https://img.shields.io/badge/Tunggu-8A2BE2)  |
 | ![deprecated](https://img.shields.io/badge/7-fabec8) | ![deprecated](https://img.shields.io/badge/$640-3422E2)      | ![deprecated](https://img.shields.io/badge/$640-8A2BE2)     | ![deprecated](https://img.shields.io/badge/$1,280-2be23e)     | ![deprecated](https://img.shields.io/badge/Juli_2024-2be23e)     | ![deprecated](https://img.shields.io/badge/Tunggu-8A2BE2)  |
+
+# Jarak Mining block 970889 cuma 2 menit
+block 970893 Timestamp	‎2026-10-11 15:47:05
+block 970892 Timestamp	‎2026-10-11 15:37:36
+block 970891 Timestamp	‎2026-10-11 15:36:08
+block 970890 Timestamp	‎2026-10-11 15:20:25
+block 970889 Timestamp	‎2026-10-11 14:58:41
+block 970888 Timestamp	‎2026-10-11 14:56:53
+block 970887 Timestamp	‎2026-10-11 14:44:37
+block 970886 Timestamp	‎2026-10-11 14:40:13
+block 970885 Timestamp	‎2026-10-11 14:10:41
+block 970884 Timestamp	‎2026-10-11 14:06:35
+block 970883 Timestamp	‎2026-10-11 13:45:46
+block 970882 Timestamp	‎2026-10-11 13:40:52
