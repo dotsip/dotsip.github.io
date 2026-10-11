@@ -55,16 +55,16 @@ Berikut adalah beberapa proyek yang pernah saya kerjakan:
 13. Alamat Bitcoin P2PKH <a href="https://magiceden.io/ordinals/discover-raresats?walletAddress=1BitcoinX1PpTdriS5pNUh7RSD3eggp6HK" target="_blank">1BitcoinX1PpTdriS5pNUh7RSD3eggp6HK</a> di Magic Eden dengan Balance 14.605 sats pada tanggal 11 Agustus 2024
 14. Rencana membuat NPWP Kafe Gunung
 15. **TABRANIJ**
-    - Lab kristal 3D → [surgabot.github.io/tabranij](https://surgabot.github.io/tabranij/) — Tinggi, Atas, Bawah, Rendah, Awal, Neto, Inti, Julat
-    - Buku Pegangan Metode GT → [surgabot.github.io/bk](https://surgabot.github.io/bk/) — Bab 1–15
+    - Lab kristal 3D → [surgasi.github.io/tabranij](https://surgasi.github.io/tabranij/) — Tinggi, Atas, Bawah, Rendah, Awal, Neto, Inti, Julat
+    - Buku Pegangan Metode GT → [surgasi.github.io/bk](https://surgasi.github.io/bk/) — Bab 1–15
 15. Hari ini 17 Agustus 2024 baru dapat kabar kalau akun fb saya sudah menghasilkan $0.02 USD
 16. Yang berharga bagimu, bisa sangat di inginkan orang lain atau sebaliknya.
 17. Hari ini 21 Agustus 2024 baru dapat kabar kalau akun fb saya sudah menghasilkan $0.04 USD
    
 ## Gambar
-<img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fsurgabot.github.io">
+<img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fsurgasi.github.io">
 
-![Logo GitHub](https://img.shields.io/github/followers/surgabot)
+![Logo GitHub](https://img.shields.io/github/followers/surgasi)
 
 <details>
   <summary>
@@ -147,7 +147,7 @@ Mencoba buat token BRC20 <a href="https://ordiscan.com/inscription/10321277" tar
 ```
 
 ![deprecated](https://img.shields.io/badge/Pengingat-8A2BE2) ![luar biasa](https://awesome.re/badge.svg) 
-![](https://img.shields.io/github/followers/surgabot) ![](https://img.shields.io/github/stars/surgabot/surgabot.github.io)
+![](https://img.shields.io/github/followers/surgasi) ![](https://img.shields.io/github/stars/surgasi/surgasi.github.io)
 ![Logo GitHub](https://img.shields.io/badge/Gambar-8A2BE2)
 
 Memulai dari gerbang pengetahuan perdagangan, investasi dan pembangunan
