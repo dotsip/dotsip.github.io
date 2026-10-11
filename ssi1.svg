@@ -1,33 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
   <defs>
-    <!-- Background Gradient (Elegan & Bersih) -->
+    <!-- Background Gradient (Elegan & Bersih, sedikit lebih terang) -->
     <linearGradient id="k2-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f8f9fb" />
-      <stop offset="100%" stop-color="#e6e9ef" />
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f0f2f5" />
     </linearGradient>
 
-    <!-- Blue Gradient (Surga) -->
+    <!-- Blue Gradient (Surga) - Transisi lebih mulus dan premium -->
     <linearGradient id="k2-blue" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00e1ff" />
-      <stop offset="50%" stop-color="#006aff" />
-      <stop offset="100%" stop-color="#1b2ce2" />
+      <stop offset="0%" stop-color="#00c6ff" />
+      <stop offset="50%" stop-color="#0072ff" />
+      <stop offset="100%" stop-color="#0d1b9a" />
     </linearGradient>
 
-    <!-- Purple Gradient (Super Intelligence) -->
+    <!-- Purple Gradient (Super Intelligence) - Transisi lebih mewah -->
     <linearGradient id="k2-purple" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5522e8" />
-      <stop offset="50%" stop-color="#8e1ee8" />
-      <stop offset="100%" stop-color="#ea1fbe" />
+      <stop offset="0%" stop-color="#7000ff" />
+      <stop offset="50%" stop-color="#a200ff" />
+      <stop offset="100%" stop-color="#f322b7" />
     </linearGradient>
 
-    <!-- Drop Shadow untuk Kedalaman 3D -->
+    <!-- Drop Shadow Lebih Halus untuk Kedalaman 3D Elegan -->
     <filter id="k2-shadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="16" stdDeviation="15" flood-color="#0c1236" flood-opacity="0.24" />
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#070a20" flood-opacity="0.15" />
     </filter>
 
     <!-- Glow Lembut untuk Bintang Kejora (✦) -->
     <filter id="glow-spark" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#ffffff" flood-opacity="0.9" />
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#ffffff" flood-opacity="0.8" />
     </filter>
   </defs>
 
@@ -36,8 +36,8 @@
 
   <!-- EMBLEM GROUP (Titik Tengah: 300, 205) -->
   <g transform="translate(300, 205)" filter="url(#k2-shadow)">
-    <!-- Ring Luar Kaca Halus (Aksen Modern) -->
-    <circle cx="0" cy="0" r="148" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.8" />
+    <!-- Ring Luar Kaca Halus (Aksen Modern, Lebih Tipis dan Elegan) -->
+    <circle cx="0" cy="0" r="148" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.9" filter="url(#glow-spark)" />
 
     <!-- 1. Sisi Biru Elektrik (Yang - Surga) -->
     <path d="M 0 -145 
@@ -53,26 +53,26 @@
              A 72.5 72.5 0 0 1 0 145 Z" 
           fill="url(#k2-purple)" />
 
-    <!-- 3. Garis Pembagi Huruf S (Putih Bercahaya) -->
+    <!-- 3. Garis Pembagi Huruf S (Putih Bercahaya Lebih Lembut) -->
     <path d="M 0 -145 
              A 72.5 72.5 0 0 0 0 0 
              A 72.5 72.5 0 0 1 0 145" 
-          fill="none" stroke="#ffffff" stroke-width="6.5" stroke-linecap="round" />
+          fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" />
 
-    <!-- 4. Mata Yin-Yang Atas: Bintang 4-Titik (✦) Ungu di dalam Sisi Biru -->
+    <!-- 4. Mata Yin-Yang Atas: Bintang 4-Titik (✦) Ungu -->
     <g transform="translate(0, -72.5)" filter="url(#glow-spark)">
-      <circle cx="0" cy="0" r="22" fill="#ffffff" />
-      <!-- 4-Point Star Spark -->
-      <path d="M 0 -13 Q 0 0 13 0 Q 0 0 0 13 Q 0 0 -13 0 Q 0 0 0 -13 Z" fill="url(#k2-purple)" />
-      <circle cx="0" cy="0" r="3" fill="#ffffff" />
+      <circle cx="0" cy="0" r="20" fill="#ffffff" />
+      <!-- 4-Point Star Spark (Lekukan dipertajam) -->
+      <path d="M 0 -14 Q 0 0 14 0 Q 0 0 0 14 Q 0 0 -14 0 Q 0 0 0 -14 Z" fill="url(#k2-purple)" />
+      <circle cx="0" cy="0" r="2.5" fill="#ffffff" />
     </g>
 
-    <!-- 5. Mata Yin-Yang Bawah: Bintang 4-Titik (✦) Biru di dalam Sisi Ungu -->
+    <!-- 5. Mata Yin-Yang Bawah: Bintang 4-Titik (✦) Biru -->
     <g transform="translate(0, 72.5)" filter="url(#glow-spark)">
-      <circle cx="0" cy="0" r="22" fill="#ffffff" />
-      <!-- 4-Point Star Spark -->
-      <path d="M 0 -13 Q 0 0 13 0 Q 0 0 0 13 Q 0 0 -13 0 Q 0 0 0 -13 Z" fill="url(#k2-blue)" />
-      <circle cx="0" cy="0" r="3" fill="#ffffff" />
+      <circle cx="0" cy="0" r="20" fill="#ffffff" />
+      <!-- 4-Point Star Spark (Lekukan dipertajam) -->
+      <path d="M 0 -14 Q 0 0 14 0 Q 0 0 0 14 Q 0 0 -14 0 Q 0 0 0 -14 Z" fill="url(#k2-blue)" />
+      <circle cx="0" cy="0" r="2.5" fill="#ffffff" />
     </g>
   </g>
 
@@ -80,21 +80,21 @@
   <g text-anchor="middle">
     <!-- Nama Utama: Surga -->
     <text x="300" y="420" 
-          font-family="'Segoe UI', Roboto, sans-serif" 
+          font-family="'Montserrat', 'Segoe UI', Roboto, sans-serif" 
           font-size="76" 
           font-weight="800" 
-          fill="#141a33" 
-          letter-spacing="1.5">
+          fill="#0c1226" 
+          letter-spacing="2">
       Surga
     </text>
 
     <!-- Subtitle: SUPER INTELLIGENCE -->
     <text x="300" y="465" 
-          font-family="'Segoe UI', Roboto, sans-serif" 
-          font-size="20" 
-          font-weight="700" 
-          fill="#3b486b" 
-          letter-spacing="5.5">
+          font-family="'Montserrat', 'Segoe UI', Roboto, sans-serif" 
+          font-size="18" 
+          font-weight="600" 
+          fill="#525c7a" 
+          letter-spacing="7">
       SUPER INTELLIGENCE
     </text>
   </g>
