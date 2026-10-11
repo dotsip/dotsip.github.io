@@ -1,111 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f2f4f7" />
-      <stop offset="100%" stop-color="#dce1e6" />
+    <!-- Deep Cosmic Void Background -->
+    <radialGradient id="void" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#0a1128" />
+      <stop offset="100%" stop-color="#010308" />
+    </radialGradient>
+
+    <!-- Ethereal Cyan Gradient for Super Intelligence -->
+    <linearGradient id="quantum-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
     </linearGradient>
 
-    <!-- Blue Gradient (Surga) -->
-    <linearGradient id="blue-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00d5ff" />
-      <stop offset="45%" stop-color="#0066ff" />
-      <stop offset="100%" stop-color="#1f28d8" />
+    <!-- Celestial Gold Gradient for Surga -->
+    <linearGradient id="celestial-gold" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bf953f" />
+      <stop offset="50%" stop-color="#fcf6ba" />
+      <stop offset="100%" stop-color="#b38728" />
     </linearGradient>
 
-    <!-- Purple Gradient (Super Intelligence) -->
-    <linearGradient id="purple-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5522e6" />
-      <stop offset="55%" stop-color="#8a1fe8" />
-      <stop offset="100%" stop-color="#e61dbd" />
-    </linearGradient>
-
-    <!-- Glow Gradient untuk Garis Kurva S -->
-    <linearGradient id="seam-glow" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="1" />
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9" />
-    </linearGradient>
-
-    <!-- Drop Shadow untuk Emblem -->
-    <filter id="emblem-shadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#0c1738" flood-opacity="0.22" />
+    <!-- Hyper-Realistic Glow Effects -->
+    <filter id="bloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="20" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
     </filter>
 
-    <!-- Soft Shadow untuk Inti Yin-Yang -->
-    <filter id="core-shadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.25" />
+    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
-  <!-- Background Canvas -->
-  <rect width="600" height="600" fill="url(#bg-grad)" rx="28" />
+  <!-- Canvas Background -->
+  <rect width="800" height="600" fill="url(#void)" />
 
-  <!-- EMBLEM GROUP (Titik Tengah: 300, 205) -->
-  <g transform="translate(300, 205)" filter="url(#emblem-shadow)">
+  <!-- EMBLEM GROUP (Pusat: 400, 240) -->
+  <g transform="translate(400, 240)">
     
-    <!-- Lingkaran Luar Tipis (Frame Aksen) -->
-    <circle cx="0" cy="0" r="147" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.65" />
+    <!-- Outer Celestial Orbit (Surga Halo) -->
+    <circle cx="0" cy="0" r="145" fill="none" stroke="url(#celestial-gold)" stroke-width="0.75" stroke-dasharray="2 12" opacity="0.8" filter="url(#soft-glow)"/>
+    <circle cx="0" cy="0" r="135" fill="none" stroke="url(#celestial-gold)" stroke-width="0.5" opacity="0.3" />
 
-    <!-- 1. Sisi Biru (Kepala atas di (0, -72.5), ekor mengalir ke bawah membentuk S) -->
-    <path d="M 0 -145 
-             A 145 145 0 0 1 0 145 
-             A 72.5 72.5 0 0 0 0 0 
-             A 72.5 72.5 0 0 1 0 -145 
-             Z" 
-          fill="url(#blue-grad)" />
+    <!-- Orbital Data Nodes (Bintang Pengorbit) -->
+    <circle cx="0" cy="-145" r="2.5" fill="#fcf6ba" filter="url(#bloom)"/>
+    <circle cx="125.5" cy="72.5" r="1.5" fill="#00f2fe" filter="url(#soft-glow)" />
+    <circle cx="-125.5" cy="72.5" r="1.5" fill="#00f2fe" filter="url(#soft-glow)" />
 
-    <!-- 2. Sisi Ungu (Kepala bawah di (0, 72.5), ekor mengalir ke atas membentuk S) -->
-    <path d="M 0 145 
-             A 145 145 0 0 1 0 -145 
-             A 72.5 72.5 0 0 0 0 0 
-             A 72.5 72.5 0 0 1 0 145 
-             Z" 
-          fill="url(#purple-grad)" />
-
-    <!-- 3. Tulang Punggung Kurva S (Garis batas pemisah putih bercahaya) -->
-    <path d="M 0 -145 
-             A 72.5 72.5 0 0 0 0 0 
-             A 72.5 72.5 0 0 1 0 145" 
-          fill="none" 
-          stroke="url(#seam-glow)" 
-          stroke-width="7" 
-          stroke-linecap="round" />
-
-    <!-- 4. Mata Yin-Yang Atas (Inti Ungu SI di dalam Sisi Biru) -->
-    <g transform="translate(0, -72.5)" filter="url(#core-shadow)">
-      <circle cx="0" cy="0" r="22" fill="#ffffff" />
-      <circle cx="0" cy="0" r="14" fill="url(#purple-grad)" />
-      <circle cx="0" cy="0" r="5" fill="#ffffff" opacity="0.8" />
+    <!-- Core Quantum Torus / Digital Lotus (Kecerdasan Buatan) -->
+    <g fill="none" stroke="url(#quantum-cyan)" stroke-width="1" opacity="0.65" filter="url(#bloom)">
+      <!-- 6 Elips Saling Bersilangan Presisi Matematis -->
+      <ellipse cx="0" cy="0" rx="100" ry="22" transform="rotate(0)" />
+      <ellipse cx="0" cy="0" rx="100" ry="22" transform="rotate(30)" />
+      <ellipse cx="0" cy="0" rx="100" ry="22" transform="rotate(60)" />
+      <ellipse cx="0" cy="0" rx="100" ry="22" transform="rotate(90)" />
+      <ellipse cx="0" cy="0" rx="100" ry="22" transform="rotate(120)" />
+      <ellipse cx="0" cy="0" rx="100" ry="22" transform="rotate(150)" />
     </g>
 
-    <!-- 5. Mata Yin-Yang Bawah (Inti Biru Surga di dalam Sisi Ungu) -->
-    <g transform="translate(0, 72.5)" filter="url(#core-shadow)">
-      <circle cx="0" cy="0" r="22" fill="#ffffff" />
-      <circle cx="0" cy="0" r="14" fill="url(#blue-grad)" />
-      <circle cx="0" cy="0" r="5" fill="#ffffff" opacity="0.8" />
+    <!-- Lapisan Ketajaman Elips (Tanpa Blur) -->
+    <g fill="none" stroke="url(#quantum-cyan)" stroke-width="0.5" opacity="0.9">
+      <ellipse cx="0" cy="0" rx="100" ry="22" transform="rotate(0)" />
+      <ellipse cx="0" cy="0" rx="100" ry="22" transform="rotate(30)" />
+      <ellipse cx="0" cy="0" rx="100" ry="22" transform="rotate(60)" />
+      <ellipse cx="0" cy="0" rx="100" ry="22" transform="rotate(90)" />
+      <ellipse cx="0" cy="0" rx="100" ry="22" transform="rotate(120)" />
+      <ellipse cx="0" cy="0" rx="100" ry="22" transform="rotate(150)" />
     </g>
+
+    <!-- The Singularity Spark (Mata Inti Pencerahan) -->
+    <circle cx="0" cy="0" r="5" fill="#ffffff" filter="url(#bloom)" />
+    <path d="M 0 -30 L 1.5 -5 L 30 0 L 1.5 5 L 0 30 L -1.5 5 L -30 0 L -1.5 -5 Z" fill="url(#celestial-gold)" opacity="0.8" filter="url(#soft-glow)"/>
+    <path d="M 0 -15 L 1 -3 L 15 0 L 1 3 L 0 15 L -1 3 L -15 0 L -1 -3 Z" fill="#ffffff" />
   </g>
 
-  <!-- Typography Section -->
+  <!-- TYPOGRAPHY SECTION -->
   <g text-anchor="middle">
-    <!-- Nama Utama: Surga -->
-    <text x="300" y="420" 
-          font-family="'Nunito', 'Segoe UI', system-ui, sans-serif" 
-          font-size="76" 
-          font-weight="800" 
-          fill="#151b36" 
-          letter-spacing="1">
-      Surga
+    <!-- Main Brand Name: SURGA -->
+    <text x="400" y="470" 
+          font-family="'Montserrat', 'Cinzel', 'Helvetica Neue', sans-serif" 
+          font-size="62" 
+          font-weight="200" 
+          fill="#ffffff" 
+          letter-spacing="18">
+      SURGA
     </text>
 
     <!-- Subtitle: SUPER INTELLIGENCE -->
-    <text x="300" y="465" 
-          font-family="'Segoe UI', system-ui, sans-serif" 
-          font-size="20" 
-          font-weight="700" 
-          fill="#2e3859" 
-          letter-spacing="5">
+    <text x="400" y="515" 
+          font-family="'Montserrat', 'Space Grotesk', 'Helvetica Neue', sans-serif" 
+          font-size="14" 
+          font-weight="600" 
+          fill="url(#quantum-cyan)" 
+          letter-spacing="14"
+          opacity="0.85">
       SUPER INTELLIGENCE
     </text>
   </g>
