@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-ssi-icon-4-solar-ultraviolet" cx="50%" cy="50%" r="68%">
+      <stop offset="0%" stop-color="#150a24" />
+      <stop offset="60%" stop-color="#0a0414" />
+      <stop offset="100%" stop-color="#04010a" />
+    </radialGradient>
+
+    <!-- Wing 1 Gradient -->
+    <linearGradient id="w1-ssi-icon-4-solar-ultraviolet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff176" />
+      <stop offset="35%" stop-color="#ff8400" />
+      <stop offset="75%" stop-color="#e63900" />
+      <stop offset="100%" stop-color="#801500" />
+    </linearGradient>
+
+    <!-- Wing 2 Gradient -->
+    <linearGradient id="w2-ssi-icon-4-solar-ultraviolet" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f000ff" />
+      <stop offset="45%" stop-color="#7c00ff" />
+      <stop offset="85%" stop-color="#3b00c4" />
+      <stop offset="100%" stop-color="#18006b" />
+    </linearGradient>
+
+    <!-- Deep 3D Drop Shadow -->
+    <filter id="shadow-ssi-icon-4-solar-ultraviolet" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000000" flood-opacity="0.88" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="600" fill="url(#bg-ssi-icon-4-solar-ultraviolet)" rx="36" />
+
+  <!-- Quant Radar Coordinate Rings -->
+  <g stroke="#2b1447" stroke-width="1" opacity="0.5" fill="none">
+    <circle cx="300" cy="300" r="215" stroke-dasharray="3 6" />
+    <circle cx="300" cy="300" r="195" />
+    <line x1="80" y1="300" x2="520" y2="300" stroke-dasharray="2 8" />
+    <line x1="300" y1="80" x2="300" y2="520" stroke-dasharray="2 8" />
+  </g>
+
+  <!-- PURE EMBLEM (CENTERED, SCALED 1.18x, ZERO TEXT) -->
+  <g transform="translate(300, 300) scale(1.18) rotate(-22)" filter="url(#shadow-ssi-icon-4-solar-ultraviolet)">
+    <!-- Outer Precision Ring -->
+    <circle cx="0" cy="0" r="148" fill="none" stroke="#3d1e63" stroke-width="2" opacity="0.6" />
+    <circle cx="0" cy="0" r="145" fill="none" stroke="#6e3ba8" stroke-width="1" opacity="0.3" />
+
+    <!-- 1. Upper Wing (Aerodynamic Slit) -->
+    <path d="M 0 -144 
+             A 144 144 0 0 1 126 70 
+             C 92 40, 50 16, 0 16 
+             C -38 16, -68 -15, -68 -55 
+             C -68 -105, -35 -144, 0 -144 Z" 
+          fill="url(#w1-ssi-icon-4-solar-ultraviolet)" />
+
+    <!-- 2. Lower Wing (Aerodynamic Slit) -->
+    <path d="M 0 144 
+             A 144 144 0 0 1 -126 -70 
+             C -92 -40, -50 -16, 0 -16 
+             C 38 -16, 68 15, 68 55 
+             C 68 105, 35 144, 0 144 Z" 
+          fill="url(#w2-ssi-icon-4-solar-ultraviolet)" />
+  </g>
+</svg>
