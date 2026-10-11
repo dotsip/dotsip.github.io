@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="gr-bg" cx="50%" cy="42%" r="65%">
+      <stop offset="0%" stop-color="#0d1424" />
+      <stop offset="55%" stop-color="#080c16" />
+      <stop offset="100%" stop-color="#04060a" />
+    </radialGradient>
+
+    <!-- Bullish Emerald Green (Hijau Pertumbuhan / Ekuitas) -->
+    <linearGradient id="bull-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a7f3d0" />
+      <stop offset="25%" stop-color="#10b981" />
+      <stop offset="65%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </linearGradient>
+
+    <!-- Bearish Ruby Crimson (Merah Likuiditas / Manajemen Risiko) -->
+    <linearGradient id="bear-red" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fecdd3" />
+      <stop offset="25%" stop-color="#f43f5e" />
+      <stop offset="65%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#881337" />
+    </linearGradient>
+
+    <!-- Pure Black Clean Shadow -->
+    <filter id="gr-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#gr-bg)" rx="32" />
+
+  <!-- Ambient Compass Grid -->
+  <g stroke="#1e293b" stroke-width="0.8" opacity="0.4" fill="none">
+    <circle cx="300" cy="215" r="165" stroke-dasharray="3 4" />
+    <circle cx="300" cy="215" r="148" />
+    <line x1="120" y1="215" x2="480" y2="215" stroke-dasharray="2 6" />
+    <line x1="300" y1="35" x2="300" y2="395" stroke-dasharray="2 6" />
+  </g>
+
+  <!-- EMBLEM GROUP (Miring -22 derajat) -->
+  <g transform="translate(300, 215) rotate(-22)" filter="url(#gr-shadow)">
+    <circle cx="0" cy="0" r="148" fill="none" stroke="#334155" stroke-width="1.8" opacity="0.6" />
+    <circle cx="0" cy="0" r="145" fill="none" stroke="#94a3b8" stroke-width="1" opacity="0.3" />
+
+    <!-- Upper Wing: BULLISH EMERALD GREEN (Pertumbuhan Modal) -->
+    <path d="M 0 -144 
+             A 144 144 0 0 1 126 70 
+             C 92 40, 50 16, 0 16 
+             C -38 16, -68 -15, -68 -55 
+             C -68 -105, -35 -144, 0 -144 Z" 
+          fill="url(#bull-green)" />
+
+    <!-- Lower Wing: BEARISH CRIMSON RED (Disiplin & Eksekusi) -->
+    <path d="M 0 144 
+             A 144 144 0 0 1 -126 -70 
+             C -92 -40, -50 -16, 0 -16 
+             C 38 -16, 68 15, 68 55 
+             C 68 105, 35 144, 0 144 Z" 
+          fill="url(#bear-red)" />
+  </g>
+
+  <!-- TYPOGRAPHY SECTION -->
+  <g text-anchor="middle">
+    <!-- Monogram Pill: SSI -->
+    <rect x="264" y="396" width="72" height="22" rx="11" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="300" y="411" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="800" fill="#10b981" letter-spacing="3.5">SSI</text>
+
+    <!-- Brand Name: SURGA -->
+    <text x="300" y="468" font-family="'Montserrat', 'Inter', system-ui, sans-serif" font-size="52" font-weight="800" fill="#ffffff" letter-spacing="9">SURGA</text>
+
+    <!-- Subtitle: SUPER INTELLIGENCE -->
+    <text x="300" y="504" font-family="'Inter', system-ui, sans-serif" font-size="16" font-weight="700" fill="#a7f3d0" letter-spacing="6">SUPER INTELLIGENCE</text>
+
+    <!-- Tagline: PERPETUAL COMPOUNDING -->
+    <text x="300" y="534" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="700" fill="#10b981" letter-spacing="4">PERPETUAL COMPOUNDING</text>
+  </g>
+</svg>
