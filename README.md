@@ -5,7 +5,7 @@
 <div class="w3-container" style="padding:0px 0px" id="atas"></div>
 <div class="w3-container" style="padding:0px 0px" id="beranda"></div>
 
-# [Gerbang & Taman Ekonomi Masa Depan 丰](https://jikibot.github.io)
+# [Gerbang & Taman Ekonomi Masa Depan 丰](https://surgasi.github.io)
 <nav>
     <ul>
         <li><a href="#beranda"> Beranda</a></li>
