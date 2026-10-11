@@ -5,7 +5,7 @@
 <div class="w3-container" style="padding:0px 0px" id="atas"></div>
 <div class="w3-container" style="padding:0px 0px" id="beranda"></div>
 
-# [Gerbang & Taman Ekonomi Masa Depan 丰](https://surgasi.github.io)
+# [Gerbang & Taman Ekonomi Masa Depan 丰](https://surgas.github.io)
 <nav>
     <ul>
         <li><a href="#beranda"> Beranda</a></li>
@@ -55,16 +55,16 @@ Berikut adalah beberapa proyek yang pernah saya kerjakan:
 13. Alamat Bitcoin P2PKH <a href="https://magiceden.io/ordinals/discover-raresats?walletAddress=1BitcoinX1PpTdriS5pNUh7RSD3eggp6HK" target="_blank">1BitcoinX1PpTdriS5pNUh7RSD3eggp6HK</a> di Magic Eden dengan Balance 14.605 sats pada tanggal 11 Agustus 2024
 14. Rencana membuat NPWP Kafe Gunung
 15. **TABRANIJ**
-    - Lab kristal 3D → [surgasi.github.io/tabranij](https://surgasi.github.io/tabranij/) — Tinggi, Atas, Bawah, Rendah, Awal, Neto, Inti, Julat
-    - Buku Pegangan Metode GT → [surgasi.github.io/bk](https://surgasi.github.io/bk/) — Bab 1–15
+    - Lab kristal 3D → [surgas.github.io/tabranij](https://surgas.github.io/tabranij/) — Tinggi, Atas, Bawah, Rendah, Awal, Neto, Inti, Julat
+    - Buku Pegangan Metode GT → [surgas.github.io/bk](https://surgas.github.io/bk/) — Bab 1–15
 15. Hari ini 17 Agustus 2024 baru dapat kabar kalau akun fb saya sudah menghasilkan $0.02 USD
 16. Yang berharga bagimu, bisa sangat di inginkan orang lain atau sebaliknya.
 17. Hari ini 21 Agustus 2024 baru dapat kabar kalau akun fb saya sudah menghasilkan $0.04 USD
    
 ## Gambar
-<img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fsurgasi.github.io">
+<img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fsurgas.github.io">
 
-![Logo GitHub](https://img.shields.io/github/followers/surgasi)
+![Logo GitHub](https://img.shields.io/github/followers/surgas)
 
 <details>
   <summary>
@@ -147,7 +147,7 @@ Mencoba buat token BRC20 <a href="https://ordiscan.com/inscription/10321277" tar
 ```
 
 ![deprecated](https://img.shields.io/badge/Pengingat-8A2BE2) ![luar biasa](https://awesome.re/badge.svg) 
-![](https://img.shields.io/github/followers/surgasi) ![](https://img.shields.io/github/stars/surgasi/surgasi.github.io)
+![](https://img.shields.io/github/followers/surgas) ![](https://img.shields.io/github/stars/surgas/surgas.github.io)
 ![Logo GitHub](https://img.shields.io/badge/Gambar-8A2BE2)
 
 Memulai dari gerbang pengetahuan perdagangan, investasi dan pembangunan
@@ -257,15 +257,27 @@ Pasar adalah majikan Anda                                                 Pasar 
 | ![deprecated](https://img.shields.io/badge/7-fabec8) | ![deprecated](https://img.shields.io/badge/$640-3422E2)      | ![deprecated](https://img.shields.io/badge/$640-8A2BE2)     | ![deprecated](https://img.shields.io/badge/$1,280-2be23e)     | ![deprecated](https://img.shields.io/badge/Juli_2024-2be23e)     | ![deprecated](https://img.shields.io/badge/Tunggu-8A2BE2)  |
 
 # Jarak Mining block 970889 cuma 2 menit
+
 block 970893 Timestamp	‎2026-10-11 15:47:05
+
 block 970892 Timestamp	‎2026-10-11 15:37:36
+
 block 970891 Timestamp	‎2026-10-11 15:36:08
+
 block 970890 Timestamp	‎2026-10-11 15:20:25
+
 block 970889 Timestamp	‎2026-10-11 14:58:41
+
 block 970888 Timestamp	‎2026-10-11 14:56:53
+
 block 970887 Timestamp	‎2026-10-11 14:44:37
+
 block 970886 Timestamp	‎2026-10-11 14:40:13
+
 block 970885 Timestamp	‎2026-10-11 14:10:41
+
 block 970884 Timestamp	‎2026-10-11 14:06:35
+
 block 970883 Timestamp	‎2026-10-11 13:45:46
+
 block 970882 Timestamp	‎2026-10-11 13:40:52
