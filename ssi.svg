@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f2f4f7" />
+      <stop offset="100%" stop-color="#dce1e6" />
+    </linearGradient>
+
+    <!-- Blue Gradient (Surga) -->
+    <linearGradient id="blue-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d5ff" />
+      <stop offset="45%" stop-color="#0066ff" />
+      <stop offset="100%" stop-color="#1f28d8" />
+    </linearGradient>
+
+    <!-- Purple Gradient (Super Intelligence) -->
+    <linearGradient id="purple-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5522e6" />
+      <stop offset="55%" stop-color="#8a1fe8" />
+      <stop offset="100%" stop-color="#e61dbd" />
+    </linearGradient>
+
+    <!-- Glow Gradient untuk Garis Kurva S -->
+    <linearGradient id="seam-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Drop Shadow untuk Emblem -->
+    <filter id="emblem-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#0c1738" flood-opacity="0.22" />
+    </filter>
+
+    <!-- Soft Shadow untuk Inti Yin-Yang -->
+    <filter id="core-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="600" fill="url(#bg-grad)" rx="28" />
+
+  <!-- EMBLEM GROUP (Titik Tengah: 300, 205) -->
+  <g transform="translate(300, 205)" filter="url(#emblem-shadow)">
+    
+    <!-- Lingkaran Luar Tipis (Frame Aksen) -->
+    <circle cx="0" cy="0" r="147" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.65" />
+
+    <!-- 1. Sisi Biru (Kepala atas di (0, -72.5), ekor mengalir ke bawah membentuk S) -->
+    <path d="M 0 -145 
+             A 145 145 0 0 1 0 145 
+             A 72.5 72.5 0 0 0 0 0 
+             A 72.5 72.5 0 0 1 0 -145 
+             Z" 
+          fill="url(#blue-grad)" />
+
+    <!-- 2. Sisi Ungu (Kepala bawah di (0, 72.5), ekor mengalir ke atas membentuk S) -->
+    <path d="M 0 145 
+             A 145 145 0 0 1 0 -145 
+             A 72.5 72.5 0 0 0 0 0 
+             A 72.5 72.5 0 0 1 0 145 
+             Z" 
+          fill="url(#purple-grad)" />
+
+    <!-- 3. Tulang Punggung Kurva S (Garis batas pemisah putih bercahaya) -->
+    <path d="M 0 -145 
+             A 72.5 72.5 0 0 0 0 0 
+             A 72.5 72.5 0 0 1 0 145" 
+          fill="none" 
+          stroke="url(#seam-glow)" 
+          stroke-width="7" 
+          stroke-linecap="round" />
+
+    <!-- 4. Mata Yin-Yang Atas (Inti Ungu SI di dalam Sisi Biru) -->
+    <g transform="translate(0, -72.5)" filter="url(#core-shadow)">
+      <circle cx="0" cy="0" r="22" fill="#ffffff" />
+      <circle cx="0" cy="0" r="14" fill="url(#purple-grad)" />
+      <circle cx="0" cy="0" r="5" fill="#ffffff" opacity="0.8" />
+    </g>
+
+    <!-- 5. Mata Yin-Yang Bawah (Inti Biru Surga di dalam Sisi Ungu) -->
+    <g transform="translate(0, 72.5)" filter="url(#core-shadow)">
+      <circle cx="0" cy="0" r="22" fill="#ffffff" />
+      <circle cx="0" cy="0" r="14" fill="url(#blue-grad)" />
+      <circle cx="0" cy="0" r="5" fill="#ffffff" opacity="0.8" />
+    </g>
+  </g>
+
+  <!-- Typography Section -->
+  <g text-anchor="middle">
+    <!-- Nama Utama: Surga -->
+    <text x="300" y="420" 
+          font-family="'Nunito', 'Segoe UI', system-ui, sans-serif" 
+          font-size="76" 
+          font-weight="800" 
+          fill="#151b36" 
+          letter-spacing="1">
+      Surga
+    </text>
+
+    <!-- Subtitle: SUPER INTELLIGENCE -->
+    <text x="300" y="465" 
+          font-family="'Segoe UI', system-ui, sans-serif" 
+          font-size="20" 
+          font-weight="700" 
+          fill="#2e3859" 
+          letter-spacing="5">
+      SUPER INTELLIGENCE
+    </text>
+  </g>
+</svg>
