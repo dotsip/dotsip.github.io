@@ -42,7 +42,7 @@ Pertama-tama: terima kasih atas dukungan Anda. Karena orang-orang seperti Anda, 
 Berikut adalah beberapa proyek yang pernah saya kerjakan:
 1. GitHub <a href="https://metabrani.github.io/" target="_blank">MetaBrani</a>
 2. <a href="https://mempool.space/tx/f61be88b48af826c9056f6fc1c7391ca8e052a83d8f00efc5a6c4025c389f280" target="_blank">OP_RETURN <a/>Kepanjangan kata getbos
-3. GitHub <a href="https://vividbeloved.github.io/" target="_blank">Vivid Beloved</a> pengujian Commit changes...
+3. GitHub <a href="https://surgas.github.io/" target="_blank">Surgas</a> pengujian Commit changes...
 4. Belajar berkebun digital 🪴
 5. Proyek <a href="https://www.ord.io/bc1ph3ktpvqlhk8nkz979kl9hz0zjjz6dl4w39srcednvhzepdpcmu5qfwk0e6/" target="_blank">Ordinals bc1ph3ktpvqlhk8nkz979kl9hz0zjjz6dl4w39srcednvhzepdpcmu5qfwk0e6</a>
 6. Aset NFT <a href="https://rank.dragontown.xyz/token/3499" target="_blank">DragonTown</a> #3499
