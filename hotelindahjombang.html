@@ -3,28 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hotel Indah Jombang</title>
+  <meta name="description" content="Hotel Indah Jombang - Penginapan nyaman di pusat kota Jombang. WiFi gratis, kolam renang, restoran, dan pelayanan ramah.">
+  <meta name="keywords" content="hotel jombang, penginapan jombang, hotel indah jombang, sewa kamar jombang">
+  <meta name="theme-color" content="#1a1a1a">
+  <title>Hotel Indah Jombang | Penginapan Nyaman di Pusat Kota</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-  <!-- CSS Internal -->
   <style>
-    /* Reset & Base */
+    :root {
+      --primary: #c9a227;
+      --primary-dark: #a8871e;
+      --dark: #121212;
+      --dark-2: #1e1e1e;
+      --light: #f8f5f0;
+      --gray: #6b6b6b;
+      --white: #ffffff;
+      --shadow: 0 10px 40px rgba(0,0,0,0.08);
+      --radius: 16px;
+      --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="dark"] {
+      --light: #1a1a1a;
+      --white: #242424;
+      --dark: #f0f0f0;
+      --dark-2: #2a2a2a;
+      --gray: #aaaaaa;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #f9f9f9;
+      line-height: 1.7;
+      color: var(--dark);
+      background: var(--light);
+      overflow-x: hidden;
+      transition: background 0.4s, color 0.4s;
     }
 
     .container {
@@ -33,8 +61,9 @@
       padding: 0 20px;
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
       font-family: 'Playfair Display', serif;
+      font-weight: 600;
     }
 
     img {
@@ -43,21 +72,52 @@
       display: block;
     }
 
-    /* Navbar */
-    .navbar {
-      background: #1a1a1a;
-      color: white;
+    /* ========== Preloader ========== */
+    #preloader {
       position: fixed;
-      width: 100%;
+      inset: 0;
+      background: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    #preloader.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader {
+      width: 50px;
+      height: 50px;
+      border: 3px solid rgba(201,162,39,0.3);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ========== Navbar ========== */
+    .navbar {
+      position: fixed;
       top: 0;
+      width: 100%;
       z-index: 1000;
-      padding: 1rem 0;
-      transition: 0.3s;
+      padding: 1.1rem 0;
+      transition: var(--transition);
+      background: transparent;
     }
 
     .navbar.scrolled {
-      background: rgba(26, 26, 26, 0.95);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background: rgba(18, 18, 18, 0.92);
+      backdrop-filter: blur(12px);
+      padding: 0.75rem 0;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.15);
     }
 
     .navbar .container {
@@ -66,286 +126,958 @@
       align-items: center;
     }
 
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
     .logo h1 {
-      font-size: 1.8rem;
-      color: #ffd700;
+      font-size: 1.6rem;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      font-size: 0.7rem;
+      color: #ccc;
+      display: block;
+      margin-top: -4px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
     }
 
     .nav-links {
       display: flex;
       list-style: none;
+      align-items: center;
+      gap: 0.5rem;
     }
 
-    .nav-links li {
-      margin-left: 2rem;
-    }
-
-    .nav-link {
+    .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: 500;
-      transition: 0.3s;
+      font-size: 0.95rem;
+      padding: 8px 16px;
+      border-radius: 30px;
+      transition: var(--transition);
     }
 
-    .nav-link:hover {
-      color: #ffd700;
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+      background: rgba(201,162,39,0.12);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-toggle, .hamburger {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.25rem;
+      cursor: pointer;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .theme-toggle:hover, .hamburger:hover {
+      background: rgba(255,255,255,0.1);
+      color: var(--primary);
     }
 
     .hamburger {
       display: none;
       flex-direction: column;
-      cursor: pointer;
+      gap: 5px;
     }
 
     .hamburger span {
-      width: 25px;
-      height: 3px;
+      width: 22px;
+      height: 2px;
       background: white;
-      margin: 4px 0;
-      transition: 0.3s;
+      transition: var(--transition);
+      border-radius: 2px;
     }
 
-    /* Hero */
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Scroll Progress */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), #e8c84a);
+      width: 0%;
+      z-index: 1001;
+      transition: width 0.1s;
+    }
+
+    /* ========== Hero ========== */
     .hero {
       height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                  url('https://images.unsplash.com/photo-1566073772329-8d7a6a3b8c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      min-height: 650px;
+      background: linear-gradient(135deg, rgba(0,0,0,0.65), rgba(0,0,0,0.45)),
+                  url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: linear-gradient(transparent, var(--light));
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 20px;
+      animation: fadeUp 1s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(201,162,39,0.2);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
     }
 
     .hero-content h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
     }
 
     .hero-content h1 span {
-      color: #ffd700;
+      color: var(--primary);
     }
 
     .hero-content p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      max-width: 700px;
+      font-size: 1.15rem;
+      opacity: 0.9;
+      margin-bottom: 2.2rem;
+      max-width: 560px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    .btn-primary {
-      background: #ffd700;
-      color: #1a1a1a;
-      padding: 12px 30px;
-      border: none;
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
       border-radius: 50px;
       font-weight: 600;
+      font-size: 0.95rem;
       text-decoration: none;
-      display: inline-block;
-      transition: 0.3s;
+      transition: var(--transition);
       cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #121212;
     }
 
     .btn-primary:hover {
-      background: #e6c200;
+      background: var(--primary-dark);
       transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(201,162,39,0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #121212;
+      border-color: white;
     }
 
     .btn-secondary {
       background: transparent;
-      color: #1a1a1a;
-      border: 2px solid #1a1a1a;
-      padding: 8px 20px;
-      border-radius: 50px;
-      text-decoration: none;
+      color: var(--dark);
+      border: 2px solid var(--dark);
+      padding: 10px 24px;
       font-size: 0.9rem;
-      transition: 0.3s;
     }
 
     .btn-secondary:hover {
-      background: #1a1a1a;
+      background: var(--dark);
       color: white;
     }
 
-    /* Section */
+    /* ========== Section Common ========== */
     .section {
-      padding: 80px 0;
+      padding: 100px 0;
     }
 
-    .bg-light {
-      background: #f5f5f5;
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-header .subtitle {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+      display: block;
     }
 
     .section-title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 1rem;
       position: relative;
+      display: inline-block;
     }
 
     .section-title::after {
       content: '';
-      width: 80px;
-      height: 4px;
-      background: #ffd700;
+      width: 60px;
+      height: 3px;
+      background: var(--primary);
       position: absolute;
-      bottom: -15px;
+      bottom: -12px;
       left: 50%;
       transform: translateX(-50%);
     }
 
-    /* Facilities */
+    .section-desc {
+      color: var(--gray);
+      max-width: 600px;
+      margin: 1.5rem auto 0;
+    }
+
+    /* ========== Reveal Animation ========== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========== Facilities ========== */
     .facilities-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.8rem;
     }
 
-    .facility-item {
+    .facility-card {
+      background: var(--white);
+      padding: 2.2rem 1.8rem;
+      border-radius: var(--radius);
       text-align: center;
-      padding: 2rem;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: 0.3s;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid transparent;
     }
 
-    .facility-item:hover {
-      transform: translateY(-10px);
+    .facility-card:hover {
+      transform: translateY(-12px);
+      border-color: var(--primary);
+      box-shadow: 0 20px 40px rgba(201,162,39,0.12);
     }
 
-    .facility-item i {
-      font-size: 2.5rem;
-      color: #ffd700;
-      margin-bottom: 1rem;
+    .facility-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, rgba(201,162,39,0.15), rgba(201,162,39,0.05));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.3rem;
+      font-size: 1.8rem;
+      color: var(--primary);
+      transition: var(--transition);
     }
 
-    /* Rooms */
+    .facility-card:hover .facility-icon {
+      background: var(--primary);
+      color: #121212;
+      transform: scale(1.1);
+    }
+
+    .facility-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .facility-card p {
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    /* ========== Rooms ========== */
     .rooms-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
     }
 
     .room-card {
-      background: white;
-      border-radius: 15px;
+      background: var(--white);
+      border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      transition: 0.3s;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
     }
 
     .room-card:hover {
       transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+    }
+
+    .room-img {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+    }
+
+    .room-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s;
+    }
+
+    .room-card:hover .room-img img {
+      transform: scale(1.08);
+    }
+
+    .room-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: var(--primary);
+      color: #121212;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
     }
 
     .room-info {
-      padding: 1.5rem;
+      padding: 1.6rem;
     }
 
     .room-info h3 {
-      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
     }
 
-    .price {
+    .room-price {
       font-size: 1.5rem;
-      font-weight: 600;
-      color: #e63946;
-      margin: 0.5rem 0;
+      font-weight: 700;
+      color: #c0392b;
+      margin: 0.6rem 0;
     }
 
-    .price span {
+    .room-price span {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--gray);
+    }
+
+    .room-features {
+      list-style: none;
+      margin: 1rem 0 1.4rem;
+    }
+
+    .room-features li {
       font-size: 0.9rem;
-      color: #666;
+      color: var(--gray);
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    .room-info ul {
-      margin: 1rem 0;
-      padding-left: 1.2rem;
-      font-size: 0.9rem;
-      color: #555;
+    .room-features li i {
+      color: var(--primary);
+      font-size: 0.8rem;
     }
 
-    .room-info ul li {
-      margin-bottom: 0.3rem;
+    .room-actions {
+      display: flex;
+      gap: 10px;
     }
 
-    /* Lokasi */
-    .location-text {
-      text-align: center;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      color: #555;
+    /* ========== Gallery ========== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
     }
 
-    .location-text i {
-      color: #e63946;
-      margin-right: 8px;
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 200px;
+      cursor: pointer;
+    }
+
+    .gallery-item:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+      height: 412px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item::after {
+      content: '\f00e';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.8rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+    /* ========== Testimonials ========== */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .testimonial-card .stars {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial-author img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .testimonial-author strong {
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-author span {
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    /* ========== Location ========== */
+    .location-box {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .location-info h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .location-info p {
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+    }
+
+    .location-details {
+      list-style: none;
+    }
+
+    .location-details li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .location-details i {
+      color: var(--primary);
+      margin-top: 4px;
     }
 
     .map-container {
-      border-radius: 15px;
+      border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow);
+      height: 380px;
     }
 
-    /* Contact */
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ========== FAQ ========== */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 1.2rem 1.5rem;
+      background: none;
+      border: none;
+      text-align: left;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: inherit;
+      color: var(--dark);
+      transition: var(--transition);
+    }
+
+    .faq-question:hover {
+      color: var(--primary);
+    }
+
+    .faq-question i {
+      transition: transform 0.3s;
+      color: var(--primary);
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .faq-answer-inner {
+      padding: 0 1.5rem 1.3rem;
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    /* ========== Contact ========== */
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1.2fr;
       gap: 3rem;
-      align-items: start;
     }
 
-    .contact-info {
-      font-size: 1.1rem;
+    .contact-info-card {
+      background: var(--dark-2);
+      color: white;
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      height: 100%;
+    }
+
+    .contact-info-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
     }
 
     .info-item {
       display: flex;
-      align-items: center;
-      margin-bottom: 1.5rem;
+      gap: 1rem;
+      margin-bottom: 1.6rem;
     }
 
     .info-item i {
-      font-size: 1.5rem;
-      color: #ffd700;
-      margin-right: 1rem;
-      width: 30px;
+      width: 44px;
+      height: 44px;
+      background: rgba(201,162,39,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      flex-shrink: 0;
     }
 
-    .contact-form {
-      background: white;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-family: inherit;
-    }
-
-    .contact-form button {
-      width: 100%;
-    }
-
-    /* Footer */
-    footer {
-      background: #1a1a1a;
-      color: white;
-      text-align: center;
-      padding: 2rem 0;
+    .info-item strong {
+      display: block;
+      margin-bottom: 2px;
       font-size: 0.9rem;
     }
 
-    /* Responsive */
+    .info-item p {
+      opacity: 0.85;
+      font-size: 0.95rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 2rem;
+    }
+
+    .social-links a {
+      width: 42px;
+      height: 42px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background: var(--primary);
+      color: #121212;
+    }
+
+    .contact-form {
+      background: var(--white);
+      padding: 2.2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: var(--gray);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      background: var(--light);
+      color: var(--dark);
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(201,162,39,0.15);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .nights-info {
+      background: rgba(201,162,39,0.1);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .nights-info.show {
+      display: block;
+    }
+
+    /* ========== Footer ========== */
+    footer {
+      background: #0d0d0d;
+      color: #ccc;
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand h3 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      opacity: 0.8;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.7rem;
+    }
+
+    .footer-col a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+
+    .footer-col a:hover {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    /* ========== Back to Top ========== */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 48px;
+      height: 48px;
+      background: var(--primary);
+      color: #121212;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 99;
+      box-shadow: 0 5px 20px rgba(201,162,39,0.4);
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-4px);
+      background: var(--primary-dark);
+    }
+
+    /* ========== Lightbox ========== */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+    }
+
+    .lightbox.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85vh;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* ========== Toast ========== */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #27ae60;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 500;
+      z-index: 3000;
+      opacity: 0;
+      transition: 0.4s;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* ========== Responsive ========== */
+    @media (max-width: 992px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .gallery-item:first-child {
+        grid-column: span 2;
+        height: 280px;
+      }
+      .location-box,
+      .contact-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        gap: 2rem;
+      }
+    }
+
     @media (max-width: 768px) {
       .hamburger {
         display: flex;
@@ -353,137 +1085,302 @@
 
       .nav-links {
         position: fixed;
-        top: 70px;
-        left: -100%;
-        background: #1a1a1a;
-        width: 100%;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: #121212;
         flex-direction: column;
-        text-align: center;
-        transition: 0.3s;
-        padding: 2rem 0;
+        padding: 100px 30px 40px;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+        gap: 0.5rem;
       }
 
       .nav-links.active {
-        left: 0;
+        right: 0;
       }
 
-      .nav-links li {
-        margin: 1rem 0;
+      .nav-links a {
+        width: 100%;
+        padding: 14px 20px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
       }
 
       .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
 
-      .contact-grid {
+      .section {
+        padding: 70px 0;
+      }
+
+      .rooms-grid {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-item:first-child {
+        grid-column: span 1;
+        height: 220px;
+      }
+      .gallery-item {
+        height: 180px;
       }
     }
   </style>
 </head>
-<body>
+<body data-theme="light">
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="container">
-      <div class="logo">
-        <h1>Hotel Indah</h1>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-link">Beranda</a></li>
+      <a href="#home" class="logo">
+        <div>
+          <h1>Hotel Indah</h1>
+          <span>Jombang</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Beranda</a></li>
         <li><a href="#fasilitas" class="nav-link">Fasilitas</a></li>
         <li><a href="#kamar" class="nav-link">Kamar</a></li>
+        <li><a href="#galeri" class="nav-link">Galeri</a></li>
         <li><a href="#lokasi" class="nav-link">Lokasi</a></li>
         <li><a href="#kontak" class="nav-link">Kontak</a></li>
       </ul>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle tema">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <h1>Selamat Datang di <span>Hotel Indah Jombang</span></h1>
-      <p>Nikmati kenyamanan dan keramahan di tengah kota Jombang</p>
-      <a href="#kamar" class="btn-primary">Pesan Kamar</a>
+      <div class="hero-badge">★ Penginapan Terbaik di Jombang</div>
+      <h1>Selamat Datang di<br><span>Hotel Indah Jombang</span></h1>
+      <p>Nikmati kenyamanan modern dengan sentuhan keramahan khas Jawa di pusat kota Jombang. Cocok untuk bisnis maupun liburan.</p>
+      <div class="hero-btns">
+        <a href="#kamar" class="btn btn-primary"><i class="fas fa-bed"></i> Lihat Kamar</a>
+        <a href="#kontak" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Pesan Sekarang</a>
+      </div>
     </div>
   </section>
 
   <!-- Fasilitas -->
   <section id="fasilitas" class="section">
     <div class="container">
-      <h2 class="section-title">Fasilitas Kami</h2>
+      <div class="section-header reveal">
+        <span class="subtitle">Fasilitas</span>
+        <h2 class="section-title">Kenapa Memilih Kami?</h2>
+        <p class="section-desc">Kami menyediakan berbagai fasilitas untuk membuat menginap Anda lebih nyaman dan berkesan.</p>
+      </div>
       <div class="facilities-grid">
-        <div class="facility-item">
-          <i class="fas fa-wifi"></i>
-          <h3>WiFi Gratis</h3>
-          <p>Internet cepat di seluruh area hotel</p>
+        <div class="facility-card reveal">
+          <div class="facility-icon"><i class="fas fa-wifi"></i></div>
+          <h3>WiFi Super Cepat</h3>
+          <p>Internet fiber di seluruh area hotel, cocok untuk work from hotel.</p>
         </div>
-        <div class="facility-item">
-          <i class="fas fa-car"></i>
-          <h3>Parkir Aman</h3>
-          <p>Parkir luas dan terjaga 24 jam</p>
+        <div class="facility-card reveal">
+          <div class="facility-icon"><i class="fas fa-parking"></i></div>
+          <h3>Parkir Aman 24 Jam</h3>
+          <p>Area parkir luas dan dijaga petugas keamanan sepanjang hari.</p>
         </div>
-        <div class="facility-item">
-          <i class="fas fa-swimmer"></i>
+        <div class="facility-card reveal">
+          <div class="facility-icon"><i class="fas fa-swimmer"></i></div>
           <h3>Kolam Renang</h3>
-          <p>Kolam renang bersih untuk relaksasi</p>
+          <p>Kolam renang outdoor bersih untuk relaksasi pagi & sore.</p>
         </div>
-        <div class="facility-item">
-          <i class="fas fa-utensils"></i>
+        <div class="facility-card reveal">
+          <div class="facility-icon"><i class="fas fa-utensils"></i></div>
           <h3>Restoran</h3>
-          <p>Makanan lezat khas lokal & internasional</p>
+          <p>Hidangan lokal & internasional dengan cita rasa istimewa.</p>
+        </div>
+        <div class="facility-card reveal">
+          <div class="facility-icon"><i class="fas fa-snowflake"></i></div>
+          <h3>AC & TV LED</h3>
+          <p>Semua kamar dilengkapi AC dingin dan TV LED channel lengkap.</p>
+        </div>
+        <div class="facility-card reveal">
+          <div class="facility-icon"><i class="fas fa-concierge-bell"></i></div>
+          <h3>Room Service</h3>
+          <p>Layanan kamar 24 jam untuk kebutuhan mendesak Anda.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Kamar -->
-  <section id="kamar" class="section bg-light">
+  <section id="kamar" class="section" style="background: var(--white);">
     <div class="container">
-      <h2 class="section-title">Tipe Kamar</h2>
+      <div class="section-header reveal">
+        <span class="subtitle">Akomodasi</span>
+        <h2 class="section-title">Tipe Kamar Kami</h2>
+        <p class="section-desc">Pilih kamar yang paling sesuai dengan kebutuhan dan budget Anda.</p>
+      </div>
       <div class="rooms-grid">
-        <div class="room-card">
-          <img src="https://images.unsplash.com/photo-1631048502318-6d36a3d5e3f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kamar Standard" />
+        <!-- Standard -->
+        <div class="room-card reveal">
+          <div class="room-img">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80" alt="Standard Room" loading="lazy">
+            <span class="room-badge">Terlaris</span>
+          </div>
           <div class="room-info">
             <h3>Standard Room</h3>
-            <p class="price">Rp 250.000 <span>/ malam</span></p>
-            <ul>
-              <li>1 Tempat Tidur Single</li>
-              <li>AC, TV, WiFi</li>
-              <li>Kamar Mandi Dalam</li>
+            <div class="room-price">Rp 250.000 <span>/ malam</span></div>
+            <ul class="room-features">
+              <li><i class="fas fa-check"></i> 1 Tempat Tidur Single / Twin</li>
+              <li><i class="fas fa-check"></i> AC, TV LED, WiFi</li>
+              <li><i class="fas fa-check"></i> Kamar Mandi Dalam + Shower</li>
+              <li><i class="fas fa-check"></i> Max 2 Tamu</li>
             </ul>
-            <a href="#kontak" class="btn-secondary">Pesan</a>
+            <div class="room-actions">
+              <button class="btn btn-primary" style="flex:1; justify-content:center;" onclick="bookRoom('Standard Room', 250000)">
+                <i class="fas fa-calendar-check"></i> Pesan
+              </button>
+            </div>
           </div>
         </div>
-        <div class="room-card">
-          <img src="https://images.unsplash.com/photo-1611892441775-5e8d4f9e8c8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kamar Deluxe" />
+
+        <!-- Deluxe -->
+        <div class="room-card reveal">
+          <div class="room-img">
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Deluxe Room" loading="lazy">
+            <span class="room-badge">Rekomendasi</span>
+          </div>
           <div class="room-info">
             <h3>Deluxe Room</h3>
-            <p class="price">Rp 450.000 <span>/ malam</span></p>
-            <ul>
-              <li>1 Tempat Tidur Queen</li>
-              <li>AC, TV 32", Balkon</li>
-              <li>Breakfast Gratis</li>
+            <div class="room-price">Rp 450.000 <span>/ malam</span></div>
+            <ul class="room-features">
+              <li><i class="fas fa-check"></i> 1 Queen Bed</li>
+              <li><i class="fas fa-check"></i> AC, TV 32", Balkon</li>
+              <li><i class="fas fa-check"></i> Breakfast Gratis</li>
+              <li><i class="fas fa-check"></i> Max 2-3 Tamu</li>
             </ul>
-            <a href="#kontak" class="btn-secondary">Pesan</a>
+            <div class="room-actions">
+              <button class="btn btn-primary" style="flex:1; justify-content:center;" onclick="bookRoom('Deluxe Room', 450000)">
+                <i class="fas fa-calendar-check"></i> Pesan
+              </button>
+            </div>
           </div>
         </div>
-        <div class="room-card">
-          <img src="https://images.unsplash.com/photo-1618776146330-7f3b8c8d8f8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kamar Suite" />
+
+        <!-- Suite -->
+        <div class="room-card reveal">
+          <div class="room-img">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Suite Room" loading="lazy">
+            <span class="room-badge">Premium</span>
+          </div>
           <div class="room-info">
             <h3>Suite Room</h3>
-            <p class="price">Rp 750.000 <span>/ malam</span></p>
-            <ul>
-              <li>Ruang Tamu & Kamar Tidur</li>
-              <li>AC, TV 42", Bathtub</li>
-              <li>Breakfast + Dinner</li>
+            <div class="room-price">Rp 750.000 <span>/ malam</span></div>
+            <ul class="room-features">
+              <li><i class="fas fa-check"></i> Ruang Tamu + Kamar Tidur</li>
+              <li><i class="fas fa-check"></i> TV 42", Bathtub, Mini Bar</li>
+              <li><i class="fas fa-check"></i> Breakfast + Dinner</li>
+              <li><i class="fas fa-check"></i> Max 4 Tamu</li>
             </ul>
-            <a href="#kontak" class="btn-secondary">Pesan</a>
+            <div class="room-actions">
+              <button class="btn btn-primary" style="flex:1; justify-content:center;" onclick="bookRoom('Suite Room', 750000)">
+                <i class="fas fa-calendar-check"></i> Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section id="galeri" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle">Galeri</span>
+        <h2 class="section-title">Suasana Hotel</h2>
+        <p class="section-desc">Lihat lebih dekat fasilitas dan suasana nyaman di Hotel Indah Jombang.</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80" alt="Lobby" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Kolam" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=600&q=80" alt="Restoran" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Kamar" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80" alt="Outdoor" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle">Testimoni</span>
+        <h2 class="section-title">Apa Kata Tamu Kami?</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Kamar bersih, pelayanan ramah, dan lokasinya strategis. Sangat recommended untuk yang berkunjung ke Jombang!"</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/100?img=12" alt="Budi">
+            <div>
+              <strong>Budi Santoso</strong>
+              <span>Surabaya • Deluxe Room</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"WiFi kencang, sarapan enak, dan staff sangat helpful. Cocok banget buat meeting bisnis di Jombang."</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/100?img=5" alt="Sari">
+            <div>
+              <strong>Sari Dewi</strong>
+              <span>Malang • Suite Room</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★☆</div>
+          <p>"Harga terjangkau dengan kualitas bagus. Anak-anak senang karena ada kolam renang. Akan kembali lagi."</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/100?img=33" alt="Andi">
+            <div>
+              <strong>Andi Pratama</strong>
+              <span>Sidoarjo • Standard Room</span>
+            </div>
           </div>
         </div>
       </div>
@@ -493,49 +1390,160 @@
   <!-- Lokasi -->
   <section id="lokasi" class="section">
     <div class="container">
-      <h2 class="section-title">Lokasi Kami</h2>
-      <p class="location-text">
-        <i class="fas fa-map-marker-alt"></i> 
-        Jalan Urip Sumoharjo No. 28, Jombang, Jawa Timur
-      </p>
-      <div class="map-container">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.326843184576!2d112.231156614774!3d-7.549999999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780a8b8b8b8b8b%3A0x1234567890abcdef!2sJl.%20Urip%20Sumoharjo%20No.28%2C%20Jombang!5e0!3m2!1sid!2sid!4v1710000000000!5m2!1sid!2sid" 
-          width="100%" 
-          height="400" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy">
-        </iframe>
+      <div class="section-header reveal">
+        <span class="subtitle">Lokasi</span>
+        <h2 class="section-title">Mudah Dijangkau</h2>
+      </div>
+      <div class="location-box reveal">
+        <div class="location-info">
+          <h3>Hotel Indah Jombang</h3>
+          <p>Berada di lokasi strategis di pusat kota Jombang, dekat dengan berbagai destinasi penting.</p>
+          <ul class="location-details">
+            <li><i class="fas fa-map-marker-alt"></i> <div><strong>Alamat</strong><br>Jalan Urip Sumoharjo No. 28, Jombang, Jawa Timur</div></li>
+            <li><i class="fas fa-car"></i> <div><strong>± 5 menit</strong> ke Alun-Alun Jombang</div></li>
+            <li><i class="fas fa-mosque"></i> <div><strong>± 10 menit</strong> ke Masjid Agung Baitul Mukminin</div></li>
+            <li><i class="fas fa-train"></i> <div><strong>± 15 menit</strong> ke Stasiun Jombang</div></li>
+          </ul>
+          <a href="https://maps.google.com/?q=Jalan+Urip+Sumoharjo+No.+28+Jombang" target="_blank" class="btn btn-primary" style="margin-top:1rem;">
+            <i class="fas fa-directions"></i> Buka di Google Maps
+          </a>
+        </div>
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.5!2d112.233!3d-7.546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e787c0e0e0e0e0e%3A0x0!2sJl.%20Urip%20Sumoharjo%20No.28%2C%20Jombang!5e0!3m2!1sid!2sid!4v1710000000000!5m2!1sid!2sid"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Kontak & Form -->
-  <section id="kontak" class="section bg-light">
+  <!-- FAQ -->
+  <section class="section" style="background: var(--white);">
     <div class="container">
-      <h2 class="section-title">Hubungi Kami</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
+      <div class="section-header reveal">
+        <span class="subtitle">FAQ</span>
+        <h2 class="section-title">Pertanyaan Umum</h2>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question">Jam check-in dan check-out berapa? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Check-in mulai pukul 14:00 WIB dan check-out maksimal pukul 12:00 WIB. Early check-in / late check-out bisa diminta sesuai ketersediaan.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Apakah tersedia breakfast? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Ya, breakfast gratis tersedia untuk tipe Deluxe dan Suite. Untuk Standard Room bisa ditambahkan dengan biaya tambahan.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Bagaimana cara memesan kamar? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Anda bisa memesan langsung melalui form di website ini (akan terhubung ke WhatsApp kami) atau menghubungi nomor telepon hotel.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Apakah ada parkir mobil? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Ya, tersedia parkir luas dan aman yang dijaga 24 jam. Gratis untuk tamu menginap.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle">Hubungi Kami</span>
+        <h2 class="section-title">Pesan Kamar Sekarang</h2>
+        <p class="section-desc">Isi form di bawah, kami akan segera merespons via WhatsApp.</p>
+      </div>
+      <div class="contact-grid reveal">
+        <div class="contact-info-card">
+          <h3>Informasi Kontak</h3>
           <div class="info-item">
-            <i class="fas fa-phone"></i>
-            <p>(0341) 888-999</p>
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <strong>Telepon</strong>
+              <p>(0341) 888-999</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <strong>WhatsApp</strong>
+              <p>0899-9587-888</p>
+            </div>
           </div>
           <div class="info-item">
             <i class="fas fa-envelope"></i>
-            <p>info@hotelindahjombang.com</p>
+            <div>
+              <strong>Email</strong>
+              <p>info@hotelindahjombang.com</p>
+            </div>
           </div>
           <div class="info-item">
             <i class="fas fa-clock"></i>
-            <p>Check-in: 14:00 | Check-out: 12:00</p>
+            <div>
+              <strong>Jam Operasional</strong>
+              <p>Check-in 14:00 | Check-out 12:00</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
           </div>
         </div>
+
         <form id="contactForm" class="contact-form">
-          <input type="text" id="waName" placeholder="Nama Lengkap" required />
-          <input type="email" id="waEmail" placeholder="Email" required />
-          <input type="tel" id="waPhone" placeholder="No. Telepon" required />
-          <textarea id="waMessage" placeholder="Pesan atau Permintaan Kamar" rows="5" required></textarea>
-          <button type="submit" class="btn-primary">Kirim via WhatsApp</button>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="waName">Nama Lengkap *</label>
+              <input type="text" id="waName" placeholder="Nama Anda" required>
+            </div>
+            <div class="form-group">
+              <label for="waPhone">No. WhatsApp *</label>
+              <input type="tel" id="waPhone" placeholder="08xxxxxxxxxx" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="waEmail">Email</label>
+              <input type="email" id="waEmail" placeholder="email@contoh.com">
+            </div>
+            <div class="form-group">
+              <label for="waRoom">Tipe Kamar</label>
+              <select id="waRoom">
+                <option value="">Pilih Kamar</option>
+                <option value="Standard Room - Rp 250.000">Standard Room - Rp 250.000</option>
+                <option value="Deluxe Room - Rp 450.000">Deluxe Room - Rp 450.000</option>
+                <option value="Suite Room - Rp 750.000">Suite Room - Rp 750.000</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="waCheckin">Tanggal Check-in</label>
+              <input type="date" id="waCheckin">
+            </div>
+            <div class="form-group">
+              <label for="waCheckout">Tanggal Check-out</label>
+              <input type="date" id="waCheckout">
+            </div>
+          </div>
+          <div class="nights-info" id="nightsInfo"></div>
+          <div class="form-group">
+            <label for="waMessage">Pesan / Permintaan Khusus</label>
+            <textarea id="waMessage" placeholder="Contoh: butuh extra bed, dekat lift, dll"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Kirim via WhatsApp
+          </button>
         </form>
       </div>
     </div>
@@ -544,66 +1552,311 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>© 2025 Hotel Indah Jombang. All rights reserved.</p>
-      <p>Jalan Urip Sumoharjo No. 28, Jombang</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Hotel Indah</h3>
+          <p>Penginapan nyaman di pusat kota Jombang. Kami berkomitmen memberikan pelayanan terbaik untuk setiap tamu.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#fasilitas">Fasilitas</a></li>
+            <li><a href="#kamar">Kamar</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informasi</h4>
+          <ul>
+            <li><a href="#lokasi">Lokasi</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <ul>
+            <li>Jl. Urip Sumoharjo No. 28</li>
+            <li>Jombang, Jawa Timur</li>
+            <li>(0341) 888-999</li>
+            <li>info@hotelindahjombang.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Hotel Indah Jombang. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <!-- JavaScript Internal -->
-  <script>
-    // Mobile Menu
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('active');
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img src="" alt="Preview" id="lightboxImg">
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">Pesan siap dikirim ke WhatsApp!</div>
+
+  <script>
+    // ========== Preloader ==========
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('preloader').classList.add('hide');
+      }, 600);
     });
 
-    // Smooth Scroll
+    // ========== Theme Toggle ==========
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const themeIcon = themeToggle.querySelector('i');
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = body.getAttribute('data-theme') === 'dark';
+      body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      themeIcon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    });
+
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+      body.setAttribute('data-theme', 'dark');
+      themeIcon.className = 'fas fa-sun';
+    }
+
+    // ========== Mobile Menu ==========
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // ========== Smooth Scroll & Active Nav ==========
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
     });
 
-    // Navbar Scroll
+    // ========== Navbar Scroll + Progress ==========
+    const navbar = document.getElementById('navbar');
+    const scrollProgress = document.getElementById('scrollProgress');
+    const backToTop = document.getElementById('backToTop');
+
     window.addEventListener('scroll', () => {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
+      const scrollY = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollY / docHeight) * 100;
+      scrollProgress.style.width = progress + '%';
+
+      if (scrollY > 60) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
+
+      if (scrollY > 400) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+
+      // Active nav link
+      const sections = document.querySelectorAll('section[id]');
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 120;
+        const height = sec.offsetHeight;
+        const id = sec.getAttribute('id');
+        if (scrollY >= top && scrollY < top + height) {
+          document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.nav-link[href="#${id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
     });
 
-    // Kirim ke WhatsApp — NOMOR ANDA: 082264083228
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ========== Reveal on Scroll ==========
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ========== FAQ Accordion ==========
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-answer').style.maxHeight = null;
+        });
+
+        if (!isActive) {
+          item.classList.add('active');
+          const answer = item.querySelector('.faq-answer');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // ========== Lightbox ==========
+    function openLightbox(src) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+      if (e.target.id === 'lightbox') closeLightbox();
+    });
+
+    // ========== Book Room (pre-fill form) ==========
+    function bookRoom(roomName, price) {
+      const select = document.getElementById('waRoom');
+      const optionValue = `${roomName} - Rp ${price.toLocaleString('id-ID')}`;
+      
+      // Find and select matching option
+      for (let opt of select.options) {
+        if (opt.value.includes(roomName)) {
+          select.value = opt.value;
+          break;
+        }
+      }
+
+      document.getElementById('kontak').scrollIntoView({ behavior: 'smooth' });
+      
+      // Highlight form briefly
+      const form = document.getElementById('contactForm');
+      form.style.boxShadow = '0 0 0 3px rgba(201,162,39,0.4)';
+      setTimeout(() => form.style.boxShadow = '', 1500);
+    }
+
+    // ========== Calculate Nights ==========
+    const checkinInput = document.getElementById('waCheckin');
+    const checkoutInput = document.getElementById('waCheckout');
+    const nightsInfo = document.getElementById('nightsInfo');
+
+    // Set min date to today
+    const today = new Date().toISOString().split('T')[0];
+    checkinInput.min = today;
+    checkoutInput.min = today;
+
+    function updateNights() {
+      const checkin = checkinInput.value;
+      const checkout = checkoutInput.value;
+      
+      if (checkin && checkout) {
+        const start = new Date(checkin);
+        const end = new Date(checkout);
+        const diff = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+        
+        if (diff > 0) {
+          nightsInfo.textContent = `📅 Anda akan menginap selama ${diff} malam`;
+          nightsInfo.classList.add('show');
+          checkoutInput.min = checkin;
+        } else {
+          nightsInfo.textContent = '⚠️ Tanggal check-out harus setelah check-in';
+          nightsInfo.classList.add('show');
+        }
+      } else {
+        nightsInfo.classList.remove('show');
+      }
+    }
+
+    checkinInput.addEventListener('change', () => {
+      checkoutInput.min = checkinInput.value || today;
+      updateNights();
+    });
+    checkoutInput.addEventListener('change', updateNights);
+
+    // ========== WhatsApp Form ==========
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      
-      const name = encodeURIComponent(document.getElementById('waName').value.trim());
-      const email = encodeURIComponent(document.getElementById('waEmail').value.trim());
-      const phone = encodeURIComponent(document.getElementById('waPhone').value.trim());
-      const message = encodeURIComponent(document.getElementById('waMessage').value.trim());
-      
-      let text = `*Pesan dari Hotel Indah Jombang*%0A%0A`;
+
+      const name = document.getElementById('waName').value.trim();
+      const phone = document.getElementById('waPhone').value.trim();
+      const email = document.getElementById('waEmail').value.trim();
+      const room = document.getElementById('waRoom').value;
+      const checkin = document.getElementById('waCheckin').value;
+      const checkout = document.getElementById('waCheckout').value;
+      const message = document.getElementById('waMessage').value.trim();
+
+      if (!name || !phone) {
+        alert('Nama dan No. WhatsApp wajib diisi!');
+        return;
+      }
+
+      let text = `*🏨 Pemesanan Hotel Indah Jombang*%0A%0A`;
       text += `*Nama:* ${name}%0A`;
-      text += `*Email:* ${email}%0A`;
       text += `*No. HP:* ${phone}%0A`;
-      text += `*Pesan:* ${message}`;
+      if (email) text += `*Email:* ${email}%0A`;
+      if (room) text += `*Tipe Kamar:* ${room}%0A`;
+      if (checkin) text += `*Check-in:* ${formatDate(checkin)}%0A`;
+      if (checkout) text += `*Check-out:* ${formatDate(checkout)}%0A`;
       
-      const phoneNumber = "628999587888"; // NOMOR ANDA SUDAH BENAR
+      if (checkin && checkout) {
+        const nights = Math.ceil((new Date(checkout) - new Date(checkin)) / (1000 * 60 * 60 * 24));
+        if (nights > 0) text += `*Lama Menginap:* ${nights} malam%0A`;
+      }
+      
+      if (message) text += `%0A*Pesan:* ${message}`;
+
+      const phoneNumber = "628999587888"; // Ganti dengan nomor WhatsApp hotel
       const waUrl = `https://wa.me/${phoneNumber}?text=${text}`;
-      
-      window.open(waUrl, '_blank');
-      alert('Membuka WhatsApp... Silakan kirim pesan!');
-      
+
+      // Show toast
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+
+      setTimeout(() => {
+        window.open(waUrl, '_blank');
+      }, 500);
+
       this.reset();
+      nightsInfo.classList.remove('show');
     });
+
+    function formatDate(dateStr) {
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      return new Date(dateStr).toLocaleDateString('id-ID', options);
+    }
   </script>
 </body>
 </html>
