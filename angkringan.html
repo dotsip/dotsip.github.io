@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angkringan Cindo • Ngemil Malam Ini</title>
+  <meta name="description" content="Ngemil di angkringan: teh, kopi, nasi kucing, sate usus, sate telur puyuh. Buka 24 jam. @ngemiel">
+  
+  <!-- OG TAGS (WA, X, IG) -->
+  <meta property="og:title" content="Angkringan Cindo • Ngemil Malam Ini">
+  <meta property="og:description" content="Teh hangat, kopi jos, nasi kucing, sate usus, sate telur puyuh. Pesan via WA!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ngemiel.gitlab.io">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- FONT & ICON -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --kuning: #f4e04d;
+      --emas: #d4af37;
+      --hitam: #0a0a0a;
+      --abu: #1a1a1a;
+      --coklat: #8b4513;
+      --bg: #0f0f0f;
+      --card: #1a1a1a;
+      --shadow: 0 12px 30px rgba(212, 175, 55, 0.2);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--kuning);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, var(--hitam), var(--abu));
+      color: var(--kuning);
+      text-align: center;
+      padding: 70px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23f4e04d20"/><circle cx="70" cy="40" r="3" fill="%23d4af3720"/><circle cx="50" cy="80" r="2.5" fill="%23f4e04d20"/></svg>') repeat;
+      animation: smoke 15s infinite linear;
+      opacity: 0.3;
+    }
+    @keyframes smoke {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-100px); }
+    }
+    .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.2em;
+      margin-bottom: 8px;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.4);
+      color: var(--emas);
+    }
+    .tagline {
+      font-size: 1.4em;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      color: var(--emas);
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+    .cta {
+      display: inline-block;
+      background: var(--emas);
+      color: var(--hitam);
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.3em;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+      transition: all 0.3s ease;
+    }
+    .cta:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
+    }
+
+    /* MENU */
+    .menu {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.4em;
+      color: var(--kuning);
+      margin-bottom: 45px;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      width: 100px;
+      height: 5px;
+      background: var(--emas);
+      display: block;
+      margin: 12px auto;
+      border-radius: 3px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.4s ease;
+      text-align: center;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+    .card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 18px 40px rgba(212, 175, 55, 0.3);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      filter: brightness(0.9);
+    }
+    .card-body {
+      padding: 22px;
+    }
+    .card-title {
+      font-size: 1.5em;
+      color: var(--kuning);
+      margin: 10px 0;
+      font-weight: 600;
+    }
+    .price {
+      font-size: 1.6em;
+      font-weight: 800;
+      color: var(--emas);
+      margin: 12px 0;
+    }
+    .desc {
+      font-size: 0.95em;
+      color: #aaa;
+      margin: 10px 0;
+      font-style: italic;
+    }
+    .order-btn {
+      background: var(--emas);
+      color: var(--hitam);
+      border: none;
+      padding: 13px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px;
+      transition: 0.3s;
+      font-size: 1em;
+    }
+    .order-btn:hover {
+      background: var(--kuning);
+      transform: scale(1.02);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--hitam);
+      color: var(--kuning);
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 80px;
+      border-top: 3px solid var(--emas);
+    }
+    .social a {
+      color: var(--kuning);
+      font-size: 1.8em;
+      margin: 0 15px;
+      transition: 0.3s;
+    }
+    .social a:hover {
+      color: var(--emas);
+      transform: translateY(-3px);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .logo { font-size: 2.4em; }
+      .hero h1 { font-size: 2.2em; }
+      .section-title { font-size: 1.9em; }
+      .cta { font-size: 1.1em; padding: 14px 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Angkringan Cindo</div>
+    <div class="tagline">Ngemil Malam • Kopi Jos • Sate Usus • Buka 24 Jam</div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Ngemil di Pinggir Jalan Digital</h1>
+    <p>Teh hangat, kopi jos, nasi kucing, sate usus, sate telur puyuh. Cindo nyanyi, kamu ngemil.</p>
+    <a href="#menu" class="cta">Pesan Sekarang via WA!</a>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <h2 class="section-title">Menu Ngemil Malam</h2>
+    <div class="grid">
+
+      <!-- TEH -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Teh Hangat">
+        <div class="card-body">
+          <div class="card-title">☕ Teh Hangat</div>
+          <div class="price">Rp 5.000</div>
+          <div class="desc">Teh celup panas • Jahe optional</div>
+          <button class="order-btn" onclick="order('Teh Hangat', '5000')">Pesan via WA</button>
+        </div>
+      </div>
+
+      <!-- KOPI -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Kopi Jos">
+        <div class="card-body">
+          <div class="card-title">☕ Kopi Jos Hitam</div>
+          <div class="price">Rp 6.000</div>
+          <div class="desc">Kopi tubruk • Gula aren • Josss!</div>
+          <button class="order-btn" onclick="order('Kopi Jos Hitam', '6000')">Pesan via WA</button>
+        </div>
+      </div>
+
+      <!-- NASI KUCING -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606493802981-23c8dd0b58e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Nasi Kucing">
+        <div class="card-body">
+          <div class="card-title">🍚 Nasi Kucing</div>
+          <div class="price">Rp 5.000</div>
+          <div class="desc">Nasi + sambal + ikan asin</div>
+          <button class="order-btn" onclick="order('Nasi Kucing', '5000')">Pesan via WA</button>
+        </div>
+      </div>
+
+      <!-- SATE USUS -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1626645734936-d81f1b4d0c80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sate Usus">
+        <div class="card-body">
+          <div class="card-title">🐔 Sate Usus</div>
+          <div class="price">Rp 3.000/tusuk</div>
+          <div class="desc">Usus ayam bakar • Bumbu kacang</div>
+          <button class="order-btn" onclick="order('Sate Usus', '3000/tusuk')">Pesan via WA</button>
+        </div>
+      </div>
+
+      <!-- SATE TELUR PUYUH -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606890658317-7ff038f79e73?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sate Telur Puyuh">
+        <div class="card-body">
+          <div class="card-title">🥚 Sate Telur Puyuh</div>
+          <div class="price">Rp 2.000/tusuk</div>
+          <div class="desc">Telur puyuh bakar • Manis gurih</div>
+          <button class="order-btn" onclick="order('Sate Telur Puyuh', '2000/tusuk')">Pesan via WA</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Angkringan Cindo Digital</strong> • @ngemiel • Buka 24 Jam</p>
+    <div class="social">
+      <a href="https://wa.me/628999587888" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://x.com/ngemiel" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://instagram.com/ngemiel" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2026 Angkringan SurgaHub. Ngemil, ngobrol, ngena.</p>
+  </footer>
+
+  <!-- SCRIPT ORDER VIA WA -->
+  <script>
+    function order(nama, harga) {
+      const wa = "628999587888"; // GANTI NOMOR WA KAMU
+      const pesan = `Halo Cindo! Saya mau pesan:\n*Menu*: ${nama}\n*Harga*: ${harga}\n\nTerima kasih!`;
+      const url = `https://wa.me/${wa}?text=${encodeURIComponent(pesan)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
