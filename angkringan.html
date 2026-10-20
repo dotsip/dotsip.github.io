@@ -1,324 +1,609 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angkringan Cindo • Ngemil Malam Ini</title>
-  <meta name="description" content="Ngemil di angkringan: teh, kopi, nasi kucing, sate usus, sate telur puyuh. Buka 24 jam. @ngemiel">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Indah Jombang</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   
-  <!-- OG TAGS (WA, X, IG) -->
-  <meta property="og:title" content="Angkringan Cindo • Ngemil Malam Ini">
-  <meta property="og:description" content="Teh hangat, kopi jos, nasi kucing, sate usus, sate telur puyuh. Pesan via WA!">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ngemiel.gitlab.io">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-  <!-- FONT & ICON -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <!-- CSS Internal -->
   <style>
-    :root {
-      --kuning: #f4e04d;
-      --emas: #d4af37;
-      --hitam: #0a0a0a;
-      --abu: #1a1a1a;
-      --coklat: #8b4513;
-      --bg: #0f0f0f;
-      --card: #1a1a1a;
-      --shadow: 0 12px 30px rgba(212, 175, 55, 0.2);
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--kuning);
-      line-height: 1.7;
-      overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
     }
 
-    /* HEADER */
-    header {
-      background: linear-gradient(135deg, var(--hitam), var(--abu));
-      color: var(--kuning);
-      text-align: center;
-      padding: 70px 20px;
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23f4e04d20"/><circle cx="70" cy="40" r="3" fill="%23d4af3720"/><circle cx="50" cy="80" r="2.5" fill="%23f4e04d20"/></svg>') repeat;
-      animation: smoke 15s infinite linear;
-      opacity: 0.3;
-    }
-    @keyframes smoke {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-100px); }
-    }
-    .logo {
-      font-family: 'Pacifico', cursive;
-      font-size: 3.2em;
-      margin-bottom: 8px;
-      text-shadow: 0 3px 12px rgba(0,0,0,0.4);
-      color: var(--emas);
-    }
-    .tagline {
-      font-size: 1.4em;
-      font-weight: 600;
-      opacity: 0.9;
-    }
-
-    /* HERO */
-    .hero {
-      max-width: 1000px;
+    .container {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 50px 20px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.8em;
-      color: var(--emas);
-      margin-bottom: 15px;
-    }
-    .hero p {
-      font-size: 1.2em;
-      color: #ccc;
-      margin-bottom: 30px;
-    }
-    .cta {
-      display: inline-block;
-      background: var(--emas);
-      color: var(--hitam);
-      padding: 16px 40px;
-      border-radius: 50px;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 1.3em;
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-      transition: all 0.3s ease;
-    }
-    .cta:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
-    }
-
-    /* MENU */
-    .menu {
-      max-width: 1100px;
-      margin: 60px auto;
       padding: 0 20px;
     }
-    .section-title {
-      text-align: center;
-      font-size: 2.4em;
-      color: var(--kuning);
-      margin-bottom: 45px;
-      position: relative;
-    }
-    .section-title::after {
-      content: '';
-      width: 100px;
-      height: 5px;
-      background: var(--emas);
-      display: block;
-      margin: 12px auto;
-      border-radius: 3px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-    }
-    .card {
-      background: var(--card);
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: all 0.4s ease;
-      text-align: center;
-      border: 1px solid rgba(212, 175, 55, 0.2);
-    }
-    .card:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 18px 40px rgba(212, 175, 55, 0.3);
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      filter: brightness(0.9);
-    }
-    .card-body {
-      padding: 22px;
-    }
-    .card-title {
-      font-size: 1.5em;
-      color: var(--kuning);
-      margin: 10px 0;
-      font-weight: 600;
-    }
-    .price {
-      font-size: 1.6em;
-      font-weight: 800;
-      color: var(--emas);
-      margin: 12px 0;
-    }
-    .desc {
-      font-size: 0.95em;
-      color: #aaa;
-      margin: 10px 0;
-      font-style: italic;
-    }
-    .order-btn {
-      background: var(--emas);
-      color: var(--hitam);
-      border: none;
-      padding: 13px 28px;
-      border-radius: 30px;
-      font-weight: 600;
-      cursor: pointer;
-      width: 100%;
-      margin-top: 15px;
-      transition: 0.3s;
-      font-size: 1em;
-    }
-    .order-btn:hover {
-      background: var(--kuning);
-      transform: scale(1.02);
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
     }
 
-    /* FOOTER */
-    footer {
-      background: var(--hitam);
-      color: var(--kuning);
-      text-align: center;
-      padding: 50px 20px;
-      margin-top: 80px;
-      border-top: 3px solid var(--emas);
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
-    .social a {
-      color: var(--kuning);
-      font-size: 1.8em;
-      margin: 0 15px;
+
+    /* Navbar */
+    .navbar {
+      background: #1a1a1a;
+      color: white;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 0;
       transition: 0.3s;
     }
-    .social a:hover {
-      color: var(--emas);
+
+    .navbar.scrolled {
+      background: rgba(26, 26, 26, 0.95);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+      color: #ffd700;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 2rem;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #ffd700;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                  url('https://images.unsplash.com/photo-1566073772329-8d7a6a3b8c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content h1 span {
+      color: #ffd700;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-primary {
+      background: #ffd700;
+      color: #1a1a1a;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: #e6c200;
       transform: translateY(-3px);
     }
 
-    /* RESPONSIVE */
+    .btn-secondary {
+      background: transparent;
+      color: #1a1a1a;
+      border: 2px solid #1a1a1a;
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background: #1a1a1a;
+      color: white;
+    }
+
+    /* Section */
+    .section {
+      padding: 80px 0;
+    }
+
+    .bg-light {
+      background: #f5f5f5;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #ffd700;
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Facilities */
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .facility-item {
+      text-align: center;
+      padding: 2rem;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .facility-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .facility-item i {
+      font-size: 2.5rem;
+      color: #ffd700;
+      margin-bottom: 1rem;
+    }
+
+    /* Rooms */
+    .rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .room-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .room-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .room-info {
+      padding: 1.5rem;
+    }
+
+    .room-info h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #e63946;
+      margin: 0.5rem 0;
+    }
+
+    .price span {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .room-info ul {
+      margin: 1rem 0;
+      padding-left: 1.2rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .room-info ul li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* Lokasi */
+    .location-text {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .location-text i {
+      color: #e63946;
+      margin-right: 8px;
+    }
+
+    .map-container {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-info {
+      font-size: 1.1rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-item i {
+      font-size: 1.5rem;
+      color: #ffd700;
+      margin-right: 1rem;
+      width: 30px;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+
+    .contact-form button {
+      width: 100%;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
-      .logo { font-size: 2.4em; }
-      .hero h1 { font-size: 2.2em; }
-      .section-title { font-size: 1.9em; }
-      .cta { font-size: 1.1em; padding: 14px 30px; }
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        background: #1a1a1a;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        transition: 0.3s;
+        padding: 2rem 0;
+      }
+
+      .nav-links.active {
+        left: 0;
+      }
+
+      .nav-links li {
+        margin: 1rem 0;
+      }
+
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo">Angkringan Cindo</div>
-    <div class="tagline">Ngemil Malam • Kopi Jos • Sate Usus • Buka 24 Jam</div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Ngemil di Pinggir Jalan Digital</h1>
-    <p>Teh hangat, kopi jos, nasi kucing, sate usus, sate telur puyuh. Cindo nyanyi, kamu ngemil.</p>
-    <a href="#menu" class="cta">Pesan Sekarang via WA!</a>
-  </section>
-
-  <!-- MENU -->
-  <section class="menu" id="menu">
-    <h2 class="section-title">Menu Ngemil Malam</h2>
-    <div class="grid">
-
-      <!-- TEH -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Teh Hangat">
-        <div class="card-body">
-          <div class="card-title">☕ Teh Hangat</div>
-          <div class="price">Rp 5.000</div>
-          <div class="desc">Teh celup panas • Jahe optional</div>
-          <button class="order-btn" onclick="order('Teh Hangat', '5000')">Pesan via WA</button>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <h1>Hotel Indah</h1>
       </div>
-
-      <!-- KOPI -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Kopi Jos">
-        <div class="card-body">
-          <div class="card-title">☕ Kopi Jos Hitam</div>
-          <div class="price">Rp 6.000</div>
-          <div class="desc">Kopi tubruk • Gula aren • Josss!</div>
-          <button class="order-btn" onclick="order('Kopi Jos Hitam', '6000')">Pesan via WA</button>
-        </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Beranda</a></li>
+        <li><a href="#fasilitas" class="nav-link">Fasilitas</a></li>
+        <li><a href="#kamar" class="nav-link">Kamar</a></li>
+        <li><a href="#lokasi" class="nav-link">Lokasi</a></li>
+        <li><a href="#kontak" class="nav-link">Kontak</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
+    </div>
+  </nav>
 
-      <!-- NASI KUCING -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1606493802981-23c8dd0b58e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Nasi Kucing">
-        <div class="card-body">
-          <div class="card-title">🍚 Nasi Kucing</div>
-          <div class="price">Rp 5.000</div>
-          <div class="desc">Nasi + sambal + ikan asin</div>
-          <button class="order-btn" onclick="order('Nasi Kucing', '5000')">Pesan via WA</button>
-        </div>
-      </div>
-
-      <!-- SATE USUS -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1626645734936-d81f1b4d0c80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sate Usus">
-        <div class="card-body">
-          <div class="card-title">🐔 Sate Usus</div>
-          <div class="price">Rp 3.000/tusuk</div>
-          <div class="desc">Usus ayam bakar • Bumbu kacang</div>
-          <button class="order-btn" onclick="order('Sate Usus', '3000/tusuk')">Pesan via WA</button>
-        </div>
-      </div>
-
-      <!-- SATE TELUR PUYUH -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1606890658317-7ff038f79e73?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sate Telur Puyuh">
-        <div class="card-body">
-          <div class="card-title">🥚 Sate Telur Puyuh</div>
-          <div class="price">Rp 2.000/tusuk</div>
-          <div class="desc">Telur puyuh bakar • Manis gurih</div>
-          <button class="order-btn" onclick="order('Sate Telur Puyuh', '2000/tusuk')">Pesan via WA</button>
-        </div>
-      </div>
-
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Selamat Datang di <span>Hotel Indah Jombang</span></h1>
+      <p>Nikmati kenyamanan dan keramahan di tengah kota Jombang</p>
+      <a href="#kamar" class="btn-primary">Pesan Kamar</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Fasilitas -->
+  <section id="fasilitas" class="section">
+    <div class="container">
+      <h2 class="section-title">Fasilitas Kami</h2>
+      <div class="facilities-grid">
+        <div class="facility-item">
+          <i class="fas fa-wifi"></i>
+          <h3>WiFi Gratis</h3>
+          <p>Internet cepat di seluruh area hotel</p>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-car"></i>
+          <h3>Parkir Aman</h3>
+          <p>Parkir luas dan terjaga 24 jam</p>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-swimmer"></i>
+          <h3>Kolam Renang</h3>
+          <p>Kolam renang bersih untuk relaksasi</p>
+        </div>
+        <div class="facility-item">
+          <i class="fas fa-utensils"></i>
+          <h3>Restoran</h3>
+          <p>Makanan lezat khas lokal & internasional</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kamar -->
+  <section id="kamar" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Tipe Kamar</h2>
+      <div class="rooms-grid">
+        <div class="room-card">
+          <img src="https://images.unsplash.com/photo-1631048502318-6d36a3d5e3f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kamar Standard" />
+          <div class="room-info">
+            <h3>Standard Room</h3>
+            <p class="price">Rp 250.000 <span>/ malam</span></p>
+            <ul>
+              <li>1 Tempat Tidur Single</li>
+              <li>AC, TV, WiFi</li>
+              <li>Kamar Mandi Dalam</li>
+            </ul>
+            <a href="#kontak" class="btn-secondary">Pesan</a>
+          </div>
+        </div>
+        <div class="room-card">
+          <img src="https://images.unsplash.com/photo-1611892441775-5e8d4f9e8c8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kamar Deluxe" />
+          <div class="room-info">
+            <h3>Deluxe Room</h3>
+            <p class="price">Rp 450.000 <span>/ malam</span></p>
+            <ul>
+              <li>1 Tempat Tidur Queen</li>
+              <li>AC, TV 32", Balkon</li>
+              <li>Breakfast Gratis</li>
+            </ul>
+            <a href="#kontak" class="btn-secondary">Pesan</a>
+          </div>
+        </div>
+        <div class="room-card">
+          <img src="https://images.unsplash.com/photo-1618776146330-7f3b8c8d8f8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kamar Suite" />
+          <div class="room-info">
+            <h3>Suite Room</h3>
+            <p class="price">Rp 750.000 <span>/ malam</span></p>
+            <ul>
+              <li>Ruang Tamu & Kamar Tidur</li>
+              <li>AC, TV 42", Bathtub</li>
+              <li>Breakfast + Dinner</li>
+            </ul>
+            <a href="#kontak" class="btn-secondary">Pesan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lokasi -->
+  <section id="lokasi" class="section">
+    <div class="container">
+      <h2 class="section-title">Lokasi Kami</h2>
+      <p class="location-text">
+        <i class="fas fa-map-marker-alt"></i> 
+        Jalan Urip Sumoharjo No. 28, Jombang, Jawa Timur
+      </p>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.326843184576!2d112.231156614774!3d-7.549999999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780a8b8b8b8b8b%3A0x1234567890abcdef!2sJl.%20Urip%20Sumoharjo%20No.28%2C%20Jombang!5e0!3m2!1sid!2sid!4v1710000000000!5m2!1sid!2sid" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak & Form -->
+  <section id="kontak" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Hubungi Kami</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <p>(0341) 888-999</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <p>info@hotelindahjombang.com</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <p>Check-in: 14:00 | Check-out: 12:00</p>
+          </div>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <input type="text" id="waName" placeholder="Nama Lengkap" required />
+          <input type="email" id="waEmail" placeholder="Email" required />
+          <input type="tel" id="waPhone" placeholder="No. Telepon" required />
+          <textarea id="waMessage" placeholder="Pesan atau Permintaan Kamar" rows="5" required></textarea>
+          <button type="submit" class="btn-primary">Kirim via WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p><strong>Angkringan Cindo Digital</strong> • @ngemiel • Buka 24 Jam</p>
-    <div class="social">
-      <a href="https://wa.me/628999587888" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://x.com/ngemiel" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://instagram.com/ngemiel" target="_blank"><i class="fab fa-instagram"></i></a>
+    <div class="container">
+      <p>© 2025 Hotel Indah Jombang. All rights reserved.</p>
+      <p>Jalan Urip Sumoharjo No. 28, Jombang</p>
     </div>
-    <p>&copy; 2026 Angkringan SurgaHub. Ngemil, ngobrol, ngena.</p>
   </footer>
 
-  <!-- SCRIPT ORDER VIA WA -->
+  <!-- JavaScript Internal -->
   <script>
-    function order(nama, harga) {
-      const wa = "628999587888"; // GANTI NOMOR WA KAMU
-      const pesan = `Halo Cindo! Saya mau pesan:\n*Menu*: ${nama}\n*Harga*: ${harga}\n\nTerima kasih!`;
-      const url = `https://wa.me/${wa}?text=${encodeURIComponent(pesan)}`;
-      window.open(url, '_blank');
-    }
-  </script>
+    // Mobile Menu
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // Navbar Scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Kirim ke WhatsApp — NOMOR ANDA: 082264083228
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = encodeURIComponent(document.getElementById('waName').value.trim());
+      const email = encodeURIComponent(document.getElementById('waEmail').value.trim());
+      const phone = encodeURIComponent(document.getElementById('waPhone').value.trim());
+      const message = encodeURIComponent(document.getElementById('waMessage').value.trim());
+      
+      let text = `*Pesan dari Hotel Indah Jombang*%0A%0A`;
+      text += `*Nama:* ${name}%0A`;
+      text += `*Email:* ${email}%0A`;
+      text += `*No. HP:* ${phone}%0A`;
+      text += `*Pesan:* ${message}`;
+      
+      const phoneNumber = "628999587888"; // NOMOR ANDA SUDAH BENAR
+      const waUrl = `https://wa.me/${phoneNumber}?text=${text}`;
+      
+      window.open(waUrl, '_blank');
+      alert('Membuka WhatsApp... Silakan kirim pesan!');
+      
+      this.reset();
+    });
+  </script>
 </body>
 </html>
