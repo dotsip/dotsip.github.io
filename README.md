@@ -1,8 +1,8 @@
 # DotSip
 
-## Tentang Dotsip
+## Tentang DotSip
 
-Dotsip adalah perusahaan teknologi yang membantu hotel meningkatkan tingkat hunian kamar, efisiensi operasional, dan pengalaman pelanggan melalui pemanfaatan internet, website modern, otomatisasi digital, dan kecerdasan buatan.
+DotSip adalah perusahaan teknologi yang membantu hotel meningkatkan tingkat hunian kamar, efisiensi operasional, dan pengalaman pelanggan melalui pemanfaatan internet, website modern, otomatisasi digital, dan kecerdasan buatan.
 
 Misi kami adalah membantu hotel bertransformasi dari operasi manual menuju hotel yang siap menghadapi era AI dan Superintelligence.
 
@@ -41,9 +41,9 @@ Banyak hotel masih mengalami:
 
 ---
 
-# Solusi Dotsip
+# Solusi DotSip
 
-Dotsip menyediakan:
+DotSip menyediakan:
 
 ## 1. Website Hotel Modern
 
@@ -198,7 +198,7 @@ Member mendapatkan:
 
 ---
 
-# Roadmap Dotsip
+# Roadmap DotSip
 
 ## Fase 1
 
@@ -257,5 +257,5 @@ https://dotsip.com
 
 ---
 
-© Dotsip
+© DotSip
 Building The Future Of Intelligent Hospitality
