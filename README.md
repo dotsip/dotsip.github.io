@@ -5,7 +5,7 @@
 <div class="w3-container" style="padding:0px 0px" id="atas"></div>
 <div class="w3-container" style="padding:0px 0px" id="beranda"></div>
 
-# [Gerbang & Taman Ekonomi Masa Depan 丰](https://surgas.github.io)
+# [Gerbang & Taman Ekonomi Masa Depan 丰](https://hotelsip.github.io)
 <nav>
     <ul>
         <li><a href="#beranda"> Beranda</a></li>
@@ -42,7 +42,7 @@ Pertama-tama: terima kasih atas dukungan Anda. Karena orang-orang seperti Anda, 
 Berikut adalah beberapa proyek yang pernah saya kerjakan:
 1. GitHub <a href="https://metabrani.github.io/" target="_blank">MetaBrani</a>
 2. <a href="https://mempool.space/tx/f61be88b48af826c9056f6fc1c7391ca8e052a83d8f00efc5a6c4025c389f280" target="_blank">OP_RETURN <a/>Kepanjangan kata getbos
-3. GitHub <a href="https://surgas.github.io/" target="_blank">Surgas</a> pengujian Commit changes...
+3. GitHub <a href="https://hotelsip.github.io/" target="_blank">Hotelsip</a> pengujian Commit changes...
 4. Belajar berkebun digital 🪴
 5. Proyek <a href="https://www.ord.io/bc1ph3ktpvqlhk8nkz979kl9hz0zjjz6dl4w39srcednvhzepdpcmu5qfwk0e6/" target="_blank">Ordinals bc1ph3ktpvqlhk8nkz979kl9hz0zjjz6dl4w39srcednvhzepdpcmu5qfwk0e6</a>
 6. Aset NFT <a href="https://rank.dragontown.xyz/token/3499" target="_blank">DragonTown</a> #3499
@@ -55,16 +55,16 @@ Berikut adalah beberapa proyek yang pernah saya kerjakan:
 13. Alamat Bitcoin P2PKH <a href="https://magiceden.io/ordinals/discover-raresats?walletAddress=1BitcoinX1PpTdriS5pNUh7RSD3eggp6HK" target="_blank">1BitcoinX1PpTdriS5pNUh7RSD3eggp6HK</a> di Magic Eden dengan Balance 14.605 sats pada tanggal 11 Agustus 2024
 14. Rencana membuat NPWP Kafe Gunung
 15. **TABRANIJ**
-    - Lab kristal 3D → [surgas.github.io/tabranij](https://surgas.github.io/tabranij/) — Tinggi, Atas, Bawah, Rendah, Awal, Neto, Inti, Julat
-    - Buku Pegangan Metode GT → [surgas.github.io/bk](https://surgas.github.io/bk/) — Bab 1–15
+    - Lab kristal 3D → [hotelsip.github.io/tabranij](https://hotelsip.github.io/tabranij/) — Tinggi, Atas, Bawah, Rendah, Awal, Neto, Inti, Julat
+    - Buku Pegangan Metode GT → [hotelsip.github.io/bk](https://hotelsip.github.io/bk/) — Bab 1–15
 15. Hari ini 17 Agustus 2024 baru dapat kabar kalau akun fb saya sudah menghasilkan $0.02 USD
 16. Yang berharga bagimu, bisa sangat di inginkan orang lain atau sebaliknya.
 17. Hari ini 21 Agustus 2024 baru dapat kabar kalau akun fb saya sudah menghasilkan $0.04 USD
    
 ## Gambar
-<img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fsurgas.github.io">
+<img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fhotelsip.github.io">
 
-![Logo GitHub](https://img.shields.io/github/followers/surgas)
+![Logo GitHub](https://img.shields.io/github/followers/hotelsip)
 
 <details>
   <summary>
@@ -147,7 +147,7 @@ Mencoba buat token BRC20 <a href="https://ordiscan.com/inscription/10321277" tar
 ```
 
 ![deprecated](https://img.shields.io/badge/Pengingat-8A2BE2) ![luar biasa](https://awesome.re/badge.svg) 
-![](https://img.shields.io/github/followers/surgas) ![](https://img.shields.io/github/stars/surgas/surgas.github.io)
+![](https://img.shields.io/github/followers/hotelsip) ![](https://img.shields.io/github/stars/surgas/hotelsip.github.io)
 ![Logo GitHub](https://img.shields.io/badge/Gambar-8A2BE2)
 
 Memulai dari gerbang pengetahuan perdagangan, investasi dan pembangunan
