@@ -1,8 +1,8 @@
-# Hotelsip
+# DotSip
 
-## Tentang Hotelsip
+## Tentang Dotsip
 
-Hotelsip adalah perusahaan teknologi yang membantu hotel meningkatkan tingkat hunian kamar, efisiensi operasional, dan pengalaman pelanggan melalui pemanfaatan internet, website modern, otomatisasi digital, dan kecerdasan buatan.
+Dotsip adalah perusahaan teknologi yang membantu hotel meningkatkan tingkat hunian kamar, efisiensi operasional, dan pengalaman pelanggan melalui pemanfaatan internet, website modern, otomatisasi digital, dan kecerdasan buatan.
 
 Misi kami adalah membantu hotel bertransformasi dari operasi manual menuju hotel yang siap menghadapi era AI dan Superintelligence.
 
@@ -41,9 +41,9 @@ Banyak hotel masih mengalami:
 
 ---
 
-# Solusi Hotelsip
+# Solusi Dotsip
 
-Hotelsip menyediakan:
+Dotsip menyediakan:
 
 ## 1. Website Hotel Modern
 
@@ -198,7 +198,7 @@ Member mendapatkan:
 
 ---
 
-# Roadmap Hotelsip
+# Roadmap Dotsip
 
 ## Fase 1
 
@@ -250,12 +250,12 @@ Hotel Superintelligence Platform
 Hotelsip mencari pemilik hotel yang ingin berkembang bersama melalui teknologi, data, dan AI.
 
 Email:
-hello@hotelsip.com
+hello@dotsip.com
 
 Website:
-https://hotelsip.com
+https://dotsip.com
 
 ---
 
-© Hotelsip
+© Dotsip
 Building The Future Of Intelligent Hospitality
