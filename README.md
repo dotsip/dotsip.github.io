@@ -1,112 +1,159 @@
-# Subuya
+# MENUANG
 
-## Surga Bunga Yayasan
+## Menuang Nilai, Membangun Masa Depan
 
-SUBUYA adalah ekosistem yang berfokus pada pertumbuhan, kolaborasi, teknologi, dan penciptaan nilai berkelanjutan untuk masyarakat dan dunia usaha.
+MENUANG adalah sebuah ekosistem yang berfokus pada pengembangan teknologi, kecerdasan buatan (AI), investasi, bisnis, dan pemberdayaan manusia melalui inovasi yang berkelanjutan.
 
-Nama SUBUYA berasal dari:
+Nama **MENUANG** terinspirasi dari kata baku bahasa Indonesia yang berarti mencurahkan atau mengalirkan sesuatu dari satu wadah ke wadah lainnya.
 
-- SU : Surga
-- BU : Bunga
-- YA : Yayasan
+Filosofi ini mencerminkan proses menuangkan:
 
-## Filosofi
-
-SUBUYA lahir dari keyakinan bahwa setiap ide yang dibangun di atas fondasi yang kuat dapat tumbuh dan berkembang seperti bunga yang mekar.
-
-Surga melambangkan tujuan yang luhur.
-
-Bunga melambangkan pertumbuhan, keindahan, serta hasil dari proses yang konsisten.
-
-Yayasan melambangkan fondasi yang kokoh untuk menciptakan manfaat jangka panjang.
+- Pengetahuan menjadi kebijaksanaan
+- Teknologi menjadi solusi
+- Ide menjadi karya
+- Nilai menjadi manfaat
+- Peluang menjadi kesejahteraan
 
 ---
 
-## Visi
+# Filosofi
 
-Membangun ekosistem teknologi, investasi, dan kolaborasi bisnis yang berkelanjutan untuk meningkatkan kesejahteraan masyarakat.
+MENUANG percaya bahwa setiap inovasi besar dimulai dari sebuah gagasan sederhana yang dituangkan secara konsisten menjadi tindakan nyata.
 
-## Misi
-
-- Mengembangkan solusi berbasis teknologi dan kecerdasan buatan.
-- Mendukung transformasi digital berbagai sektor usaha.
-- Membangun jaringan kemitraan yang saling menguntungkan.
-- Mengembangkan literasi keuangan, investasi, dan aset digital.
-- Menciptakan dampak sosial yang positif dan berkelanjutan.
+Sebagaimana air yang dituangkan mampu mengisi ruang kosong, MENUANG hadir untuk mengisi kebutuhan dunia modern melalui teknologi, kolaborasi, dan pemanfaatan kecerdasan buatan.
 
 ---
 
-## Nilai Inti
+# Visi
 
-### Integritas
-Kejujuran dan transparansi sebagai fondasi utama.
-
-### Pertumbuhan
-Pembelajaran dan pengembangan berkelanjutan.
-
-### Inovasi
-Memanfaatkan teknologi untuk menyelesaikan masalah nyata.
-
-### Kolaborasi
-Membangun keberhasilan bersama.
-
-### Keberlanjutan
-Menciptakan manfaat jangka panjang.
+Menjadi ekosistem teknologi dan investasi yang mampu menghadirkan solusi cerdas, berkelanjutan, dan bermanfaat bagi masyarakat global.
 
 ---
 
-# Leadership
+# Misi
 
-## Founder & CEO
+- Mengembangkan solusi berbasis Artificial Intelligence.
+- Membantu transformasi digital berbagai sektor usaha.
+- Mendorong pertumbuhan bisnis melalui teknologi.
+- Mengembangkan pemahaman terhadap aset digital dan ekonomi modern.
+- Membangun jaringan kolaborasi yang produktif dan berkelanjutan.
 
-### Tentang CEO
+---
 
-Seorang konsultan independen yang memiliki pengalaman panjang dalam analisis pasar keuangan dan teknologi.
+# Nilai Inti
 
-### Latar Belakang Profesional
+## Integritas
 
-- Tercatat sebagai **Konsultan** pada identitas pekerjaan resmi.
-- Berkecimpung di dunia **trading forex sejak tahun 2010**.
-- Memperdalam analisis dan perdagangan **emas (gold trading) sejak tahun 2026**.
-- Memahami konsep dan perkembangan **Bitcoin serta aset digital** sebagai bagian dari transformasi ekonomi modern.
-- Memiliki minat terhadap pengembangan Artificial Intelligence (AI), teknologi digital, dan sistem bisnis berbasis data.
+Kepercayaan dibangun melalui kejujuran dan transparansi.
 
-### Key Expertise
+## Inovasi
+
+Setiap tantangan adalah peluang untuk menciptakan solusi baru.
+
+## Pertumbuhan
+
+Pembelajaran dan pengembangan dilakukan tanpa henti.
+
+## Kolaborasi
+
+Kesuksesan terbesar dibangun bersama.
+
+## Keberlanjutan
+
+Manfaat yang diciptakan harus dapat dirasakan dalam jangka panjang.
+
+---
+
+# Bidang Pengembangan
+
+- Artificial Intelligence (AI)
+- Digital Business
+- Hotel Technology
+- Investment Technology
+- Financial Education
+- Digital Asset Research
+- Software Development
+- Business Consulting
+
+---
+
+# Founder & CEO
+
+## Surga
+
+Seorang konsultan independen dengan pengalaman panjang dalam pasar keuangan, teknologi, dan pengembangan strategi bisnis.
+
+### Profil Profesional
+
+- Berprofesi sebagai Konsultan.
+- Berkecimpung dalam dunia trading forex sejak tahun 2010.
+- Mendalami analisis dan perdagangan emas (Gold Trading).
+- Memahami Bitcoin sebagai aset digital dan bagian dari transformasi ekonomi modern.
+- Memiliki minat besar terhadap Artificial Intelligence, teknologi, dan pengembangan sistem bisnis masa depan.
+
+### Spesialisasi
 
 - Forex Market Analysis
-- Gold Trading Strategy
-- Risk & Capital Management
-- Digital Asset Understanding
-- Artificial Intelligence Implementation
+- Gold Trading
+- Risk Management
 - Business Consulting
-- Digital Transformation
-
----
-
-## Fokus Pengembangan SUBUYA
-
 - Artificial Intelligence
-- Teknologi Digital
-- Perhotelan dan Pariwisata
-- Investasi dan Keuangan
-- Aset Digital
-- Pendidikan dan Pelatihan
-- Kemitraan Bisnis
+- Digital Asset Understanding
+- Strategic Thinking
 
 ---
 
-## Tagline
+# Ekosistem MENUANG
 
-> Menanam Nilai, Menuai Manfaat.
+MENUANG dirancang sebagai fondasi bagi berbagai unit usaha dan inovasi masa depan, seperti:
+
+- MENUANG AI
+- MENUANG Capital
+- MENUANG Hotels
+- MENUANG Digital
+- MENUANG Academy
+- MENUANG Labs
 
 ---
 
-## Motto
+# Tagline
 
-> Bertumbuh dengan ilmu, berkembang dengan teknologi, dan memberi manfaat bagi banyak orang.
+> Menuang Ide Menjadi Nilai.
+
+Alternatif:
+
+- Menuang Masa Depan.
+- Menuang Inovasi, Menciptakan Dampak.
+- Dari Gagasan Menjadi Kenyataan.
+- Menuang Teknologi Untuk Kehidupan.
+- Where Ideas Become Value.
 
 ---
 
-## Future Vision
+# Motto
 
-SUBUYA bertujuan menjadi organisasi yang mampu menghubungkan manusia, teknologi, dan peluang ekonomi dalam satu ekosistem yang saling menguntungkan serta berkelanjutan.
+"Pengetahuan yang dituangkan dengan konsisten akan menjadi kekuatan yang mengubah masa depan."
+
+---
+
+# Future Roadmap
+
+### Phase 1
+Membangun fondasi teknologi dan identitas MENUANG.
+
+### Phase 2
+Mengembangkan produk AI dan platform digital.
+
+### Phase 3
+Membangun kemitraan bisnis dan industri perhotelan.
+
+### Phase 4
+Mengembangkan ekosistem investasi dan aset digital.
+
+### Phase 5
+Mewujudkan jaringan bisnis berbasis AI yang mampu memberikan manfaat skala global.
+
+---
+
+© MENUANG
+Menjadi wadah bagi ide, teknologi, dan peluang untuk tumbuh bersama.
